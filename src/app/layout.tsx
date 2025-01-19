@@ -8,21 +8,21 @@ import '@/styles/globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-inter'
 });
 
 const monserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  variable: '--font-montserrat'
 });
 
 export const metadata: Metadata = {
-  title: 'Abhishek thory',
-  description: 'Abhishek thory',
+  title: 'Atharv Naik',
+  description: 'PORTFOLIO'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

@@ -3,15 +3,15 @@ import Hero from '@/components/Sections/Hero';
 import { Divider } from '@nextui-org/react';
 
 import {
-  freelanceProjects,
+  web3Projects,
   opensourceProjects,
-  personalProjects,
+  personalProjects
 } from '@/assests/data/projectsData';
 
 import Reviews from '@/components/Sections/Reviews';
 import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
 import Navigation from '@/components/Navigation/Navigation';
-import { Abhi } from '@/components/Sections/Abhi';
+import { Atharv } from '@/components/Sections/Atharv';
 
 export default function Home() {
   return (
@@ -27,20 +27,20 @@ export default function Home() {
         heading="Personal Projects"
       />
       <ProjectsCarousel
-        projects={freelanceProjects}
-        heading="Freelance Projects (60+ Overall)"
+        projects={web3Projects}
+        heading="AI and Web3 projects"
       />
       <ProjectsCarousel
         projects={opensourceProjects}
         heading="Opensource Projects"
         carouselSettings={{
           slidesToScroll: 1,
-          slidesToShow: 2,
+          slidesToShow: 2
         }}
       />
 
       <Divider className="bg-divider" />
-      <Abhi />
+      <Atharv />
       <Footer />
     </main>
   );

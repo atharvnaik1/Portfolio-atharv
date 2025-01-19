@@ -14,7 +14,7 @@ export const HelloDetails = () => {
         <span className="text-primary">Atharv Naik</span> <br />
         Full Stack Developer
       </h1>
-      <div className="flex items-center justify-center gap-5 text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl">
+      <div className="flex items-center justify-center gap-5 text-2xl text-blue-500 sm:text-3xl xl:text-4xl 2xl:text-5xl">
         {renderSocialMediaLinks()}
       </div>
     </div>
@@ -33,8 +33,8 @@ const Hero = () => {
             return (
               <div className="mx-2 cursor-pointer" key={index}>
                 <Chip
-                  className="text-1xl p-5 hover:border-warning hover:text-warning md:p-8 md:text-3xl"
-                  color="primary"
+                  className="text-1xl p-5 hover:border-primary hover:text-primary md:p-8 md:text-3xl"
+                  color="warning"
                   variant="bordered"
                   radius="md"
                   startContent={item.icon}

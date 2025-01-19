@@ -4,43 +4,33 @@ import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaTelegram,
   FaTwitter,
-  FaWhatsapp,
-  FaYoutube,
+  FaYoutube
 } from 'react-icons/fa';
 
 export default function useSocialMediaLinks() {
   const socialLinks = {
-    telegram: {
-      link: 'https://t.me/abhi_thory',
-      icon: <FaTelegram />,
-    },
     linkedin: {
-      link: 'https://www.linkedin.com/in/abhithory/',
-      icon: <FaLinkedin />,
+      link: 'https://www.linkedin.com/in/atharvnaik1/',
+      icon: <FaLinkedin />
     },
     github: {
-      link: 'https://github.com/abhithory',
-      icon: <FaGithub />,
+      link: 'https://github.com/atharvnaik1',
+      icon: <FaGithub />
     },
     twitter: {
-      link: 'https://twitter.com/abhithory',
-      icon: <FaTwitter />,
+      link: 'https://twitter.com/athrvNaik7',
+      icon: <FaTwitter />
     },
     youtube: {
-      link: 'https://www.youtube.com/@abhithory',
-      icon: <FaYoutube />,
+      link: 'https://www.youtube.com/@Asyncccc',
+      icon: <FaYoutube />
     },
 
-    whatsapp: {
-      link: 'https://www.whatsapp.com/channel/0029VaAAtHYDTkKAYXlQjn2y',
-      icon: <FaWhatsapp />,
-    },
     email: {
-      link: 'mailto:abhishekthory001@gmail.com', // Replace with your email address
-      icon: <FaEnvelope />,
-    },
+      link: 'mailto:atharvajaynaik@gmail.com', // Replace with your email address
+      icon: <FaEnvelope />
+    }
   };
 
   const renderSocialMediaLinks = () => {
@@ -60,6 +50,6 @@ export default function useSocialMediaLinks() {
   };
 
   return {
-    renderSocialMediaLinks,
+    renderSocialMediaLinks
   };
 }

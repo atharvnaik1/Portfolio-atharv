@@ -12,7 +12,7 @@ type Props = {
 export default function ProjectsCarousel({
   projects,
   heading,
-  carouselSettings,
+  carouselSettings
 }: Props) {
   return (
     <div className="mx-auto my-12 w-[98%] md:w-[90%] 2xl:w-[85%]">

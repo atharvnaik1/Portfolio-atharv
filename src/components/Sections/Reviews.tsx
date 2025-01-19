@@ -7,16 +7,16 @@ const Reviews = () => {
   const renderReviews = () => {
     const reviews = [];
 
-    for (let i = 1; i <= 16; i++) {
+    for (let i = 1; i <= 7; i++) {
       reviews.push(
         <Image
           key={i}
-          src={`/abhi/reviews/${i}.png`}
+          src={`/atharv/reviews/${i}.png`}
           alt=""
           width={400}
           height={100}
           className=" mx-2  w-[360px] cursor-pointer rounded-2xl border-4 border-secondary object-contain transition-transform hover:scale-105  md:w-[400px] xl:w-[600px]"
-        />,
+        />
       );
     }
 

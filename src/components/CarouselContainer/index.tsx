@@ -27,26 +27,26 @@ export default function CarouselContainer({ children, settings }: Props) {
       {
         breakpoint: 1444,
         settings: {
-          slidesToShow: 2,
-        },
+          slidesToShow: 2
+        }
       },
       {
         breakpoint: 1000,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerPadding: '20px',
-        },
-      },
+          centerPadding: '20px'
+        }
+      }
     ],
-    ...settings,
+    ...settings
   };
 
   return <Slider {...config}>{children}</Slider>;

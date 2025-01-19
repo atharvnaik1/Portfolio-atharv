@@ -4,8 +4,8 @@ import React from 'react';
 const navItems = [
   {
     title: 'Hello',
-    href: '#hello',
-  },
+    href: '#hello'
+  }
 ];
 
 const Navigation = () => {
@@ -42,8 +42,8 @@ const Navigation = () => {
         <div>
           <Link href={'/'}>
             <h1 className="cursor-pointer text-2xl font-semibold">
-              <span className="text-primary">@Abhi</span>
-              Thory
+              <span className="text-blue-500">@Atharv</span>
+              Naik
             </h1>
           </Link>
         </div>

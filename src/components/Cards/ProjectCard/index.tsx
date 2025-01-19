@@ -5,7 +5,7 @@ import {
   Divider,
   Link,
   Chip,
-  ScrollShadow,
+  ScrollShadow
 } from '@nextui-org/react';
 import { styles } from '@/styles/styles';
 import { FaGithub } from 'react-icons/fa';
@@ -18,7 +18,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({
   projectDetail,
-  classNames,
+  classNames
 }: ProjectCardProps) {
   return (
     <div
