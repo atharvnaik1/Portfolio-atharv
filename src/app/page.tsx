@@ -8,7 +8,7 @@ import {
   personalProjects
 } from '@/assests/data/projectsData';
 
-import Reviews from '@/components/Sections/Reviews';
+// import Reviews from '@/components/Sections/Reviews';
 import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
 import Navigation from '@/components/Navigation/Navigation';
 import { Atharv } from '@/components/Sections/Atharv';
@@ -20,7 +20,7 @@ export default function Home() {
         <Navigation />
         <Hero />
       </div>
-      <Reviews />
+{/*       <Reviews /> */}
 
       <ProjectsCarousel
         projects={personalProjects}
