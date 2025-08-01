@@ -28,9 +28,14 @@ export default function useSocialMediaLinks() {
     },
 
     email: {
-      link: 'mailto:atharvajaynaik@gmail.com', // Replace with your email address
+      link: 'mailto:atharvajaynaik@gmail.com', 
       icon: <FaEnvelope />
+    },
+    resume: {
+      link: 'https://drive.google.com/file/d/1lUQFLkkNINK-qG8TruwqFLJO2cLjzFyR/view?usp=sharing',
+      icon: <span className="material-icons">Resume</span> 
     }
+
   };
 
   const renderSocialMediaLinks = () => {

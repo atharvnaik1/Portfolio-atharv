@@ -20,7 +20,20 @@ export type ProjectsObjectType = {
   [index: string]: ProjectDataType;
 };
 export const personalProjects: ProjectsObjectType = {
-  authCertificate: {
+  NFTMARKET: {
+    name: ' ERC-1155 NFT Market',
+    des: 'NFT Market is a platform where users can create nfts, buy, sell, and trade NFTs. The platform has a user-friendly interface that makes it easy to use for everyone.',
+    demo: 'https://nft-marketplace-seven-lovat.vercel.app/',
+    github: 'https://github.com/atharvnaik1/NFT-MARKETPLACE',
+    image: '/images/projects/nft.png',
+    skills: [ allSkills.nextjs, allSkills.typescript, 
+      allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity
+    
+    ],
+    type: ProjectType.Personal
+  },
+
+  JIRAClone: {
     name: 'JIRA Clone',
     des: 'Designed a responsive and intuitive UI to track progress, manage workflows, and assign tasks dynamically in realtime.',
     demo: ' https://jirax-clonex.vercel.app',
@@ -35,7 +48,7 @@ export const personalProjects: ProjectsObjectType = {
     type: ProjectType.Personal
   },
 
-  datavault: {
+  Forgerepo: {
     name: 'Forgerepo',
     des: 'Forgerepo is github clone where users can create, update, delete repositories and also can add, delete, update files in the repository. Users can also star repositories and follow other users.',
     demo: 'https://github-clone-98qw.onrender.com/',
@@ -50,7 +63,7 @@ export const personalProjects: ProjectsObjectType = {
     type: ProjectType.Personal
   },
 
-  chainintract: {
+  TAXAICHATBOT: {
     name: 'TAX AI CHATBOT ',
     des: 'A chatbot that helps users to calculate their tax and also provides information about tax laws and regulations. It is built using React, Node.js, and MongoDB. The chatbot uses AI to understand user queries and provide accurate responses. It also has a user-friendly interface that makes it easy to use for everyone.',
     demo: 'https://taxsavvy.vercel.app/',
@@ -64,7 +77,7 @@ export const personalProjects: ProjectsObjectType = {
     ],
     type: ProjectType.Personal
   },
-  chesschain: {
+  ChatBox: {
     name: 'ChatBox',
     des: ' Chatting application with real-time messaging and user authentication. Users can create chat rooms, join existing rooms, and send messages to other users in the room.',
     demo: 'https://mern-chat-app-v9tm.onrender.com/login',
@@ -109,6 +122,7 @@ export const personalProjects: ProjectsObjectType = {
     ],
     type: ProjectType.Personal
   }
+
 };
 
 export const opensourceProjects: ProjectsObjectType = {
@@ -143,12 +157,24 @@ export const opensourceProjects: ProjectsObjectType = {
 };
 
 export const web3Projects: ProjectsObjectType = {
-  Velosol: {
-    name: 'Velosol- Solana Trading bot ',
+  NFTMARKET: {
+    name: 'ERC-1155 NFT Market',
+    des: 'NFT Market is a platform where users can  create, buy, sell, and trade NFTs. The platform has a user-friendly interface that makes it easy to use for everyone.',
+    demo: 'https://nft-marketplace-seven-lovat.vercel.app/',
+    github: 'https://github.com/atharvnaik1/NFT-MARKETPLACE',
+    image: '/images/projects/nft.png',
+    skills: [ allSkills.nextjs, allSkills.typescript, 
+      allSkills.tailwindcss, allSkills.etherjs, allSkills.solidity
+    
+    ],
+    type: ProjectType.AIWeb3
+  },
+  bot: {
+    name: 'Bep-20 Trading bot ',
     des: 'Velosol is a trading bot that helps users to trade cryptocurrencies on the Solana blockchain. The bot uses AI to analyze market trends and make predictions about the future price of cryptocurrencies. It also has a user-friendly interface that makes it easy to use for everyone.',
     demo: '',
-    github: '',
-    image: '/images/projects/velosol.png',
+    github: 'https://github.com/atharvnaik1/Crypto-bep-20-Algo-Trader',
+    image: '/images/projects/Tradingbot1.png',
     skills: [
       allSkills.reactjs,
       allSkills.javascript,
@@ -177,7 +203,7 @@ export const web3Projects: ProjectsObjectType = {
     ],
     type: ProjectType.AIWeb3
   },
-  jetpackcat: {
+  Aiquestor: {
     name: 'Aiquestor',
     des: 'Aiquestor uses spacy to generate questions and mcqs from pdfs. ',
     demo: 'https://aiquestor.streamlit.app/',
@@ -195,20 +221,4 @@ export const web3Projects: ProjectsObjectType = {
     type: ProjectType.AIWeb3
   }
 };
-//   donpepe: {;
-//     name: 'DonPepe: New crypto token',
-//     des: 'Don Pepe is a new crypto token that is based on the famous meme coin Pepe. The project aims to create the first meme coin with an AI-powered exchange system. This exchange system will make it easier and more secure for people to buy, sell, and trade cryptocurrencies. The Don Pepe token will be used to power the exchange system and will also be used to reward users for participating in the community.',
-//     demo: 'https://www.donpepe-ai.com/',
-//     github: 'https://github.com/abhithory/pepe-coin',
-//     image: '/images/projects/donpepe.png',
-//     skills: [
-//       allSkills.nextjs,
-//       allSkills.typescript,
-//       allSkills.nodejs,
-//       allSkills.tailwindcss,
-//       allSkills.etherjs,
-//       allSkills.solidity,
-//     ],
-//     type: ProjectType.Freelance,
-//   },
-// };
+

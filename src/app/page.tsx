@@ -8,7 +8,6 @@ import {
   personalProjects
 } from '@/assests/data/projectsData';
 
-// import Reviews from '@/components/Sections/Reviews';
 import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
 import Navigation from '@/components/Navigation/Navigation';
 import { Atharv } from '@/components/Sections/Atharv';
