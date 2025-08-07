@@ -10,7 +10,7 @@ import {
 
 import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
 import Navigation from '@/components/Navigation/Navigation';
-import { Atharv } from '@/components/Sections/Atharv';
+// import { Atharv } from '@/components/Sections/Atharv';
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
       />
 
       <Divider className="bg-divider" />
-      <Atharv />
+{/*       <Atharv /> */}
       <Footer />
     </main>
   );
