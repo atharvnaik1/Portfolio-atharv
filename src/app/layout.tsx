@@ -18,7 +18,7 @@ const monserrat = Montserrat({
 
 export const metadata: Metadata = {
  title: "Atharv Naik — Full Stack Developer",
-  description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.",
+  description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.async-atharv ",
    keywords: [
      "async atharv",
      "async-atharv",
