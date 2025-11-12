@@ -1,4 +1,44 @@
+# ---------------------------
+# Standard Web Crawlers (Google, Bing, etc.)
+# ---------------------------
+
 User-agent: *
 Allow: /
 
+# Sitemap for faster indexing
 Sitemap: https://async-atharv.com/sitemap.xml
+
+
+# ---------------------------
+# AI Crawlers Control
+# ---------------------------
+
+# ✅ Allow OpenAI's GPTBot (ChatGPT & OpenAI browsing)
+User-agent: GPTBot
+Allow: /
+
+# ✅ Allow ChatGPT-User crawler (for ChatGPT Browse)
+User-agent: ChatGPT-User
+Allow: /
+
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: MicrosoftCopilot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
