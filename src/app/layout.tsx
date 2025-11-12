@@ -19,6 +19,23 @@ const monserrat = Montserrat({
 export const metadata: Metadata = {
  title: "Atharv Naik — Full Stack Developer",
   description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.",
+   keywords: [
+     "async atharv",
+     "async-atharv",
+    "Atharv Naik",
+    "Full Stack Developer",
+    "Node.js Developer",
+    "React.js Developer",
+    "Next.js Engineer",
+    "TypeScript",
+    "Kafka",
+    "ClickHouse",
+    "MySQL",
+    "Founding Full Stack Developer",
+    "Software Engineer",
+    "Hire Tech Founder",
+    "Hire Founding Developer"
+  ],
   openGraph: {
     title: "Atharv Naik — Full Stack Developer",
     description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.",
