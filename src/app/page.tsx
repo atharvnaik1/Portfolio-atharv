@@ -18,10 +18,10 @@ export default function Home() {
   return (
      <Head>
         <title>Atharv Naik — Full Stack Developer</title>
-        <meta name="description" content="Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, ClickHouse, Kafka, MySQL. Startup-perfect, wears multiple hats." />
+        <meta name="description" content="Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats." />
         {/* Open Graph */}
         <meta property="og:title" content="Atharv Naik — Full Stack Developer" />
-        <meta property="og:description" content="Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.jsClickHouse, Kafka, MySQL. Startup-perfect, wears multiple hats." />
+        <meta property="og:description" content="Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats." />
         <meta property="og:type" content="website" />
       </Head>
     <main>
