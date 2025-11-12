@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
-import Script from 'next/script';
-
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -36,16 +34,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S17K26RB4M"> </Script>
-        <Script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S17K26RB4M');
-</Script>
+     <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="canonical" href="https://async-atharv.com" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-S17K26RB4M"> </script>
+          <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-S17K26RB4M');
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${monserrat.variable}`}>
         {children}
