@@ -17,8 +17,13 @@ const monserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Atharv Naik',
-  description: 'PORTFOLIO'
+ title: "Atharv Naik — Full Stack Developer",
+  description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.",
+  openGraph: {
+    title: "Atharv Naik — Full Stack Developer",
+    description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
