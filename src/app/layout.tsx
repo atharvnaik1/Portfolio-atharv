@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
+import Script from 'next/script';
+
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -36,14 +38,14 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-S17K26RB4M"></script>
-        <script>
+       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-S17K26RB4M"> </Script>
+        <Script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-S17K26RB4M');
-</script>
+</Script>
       </head>
       <body className={`${inter.variable} ${monserrat.variable}`}>
         {children}
