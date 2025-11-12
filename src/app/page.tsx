@@ -1,6 +1,8 @@
 import Footer from '@/components/Sections/Footer';
 import Hero from '@/components/Sections/Hero';
 import { Divider } from '@nextui-org/react';
+import Head from "next/head";
+
 
 import {
   web3Projects,
@@ -14,6 +16,14 @@ import Navigation from '@/components/Navigation/Navigation';
 
 export default function Home() {
   return (
+     <Head>
+        <title>Atharv Naik — Full Stack Developer</title>
+        <meta name="description" content="Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, ClickHouse, Kafka, MySQL. Startup-perfect, wears multiple hats." />
+        {/* Open Graph */}
+        <meta property="og:title" content="Atharv Naik — Full Stack Developer" />
+        <meta property="og:description" content="Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.jsClickHouse, Kafka, MySQL. Startup-perfect, wears multiple hats." />
+        <meta property="og:type" content="website" />
+      </Head>
     <main>
       <div className="hello-section" id="hello">
         <Navigation />
