@@ -9,15 +9,21 @@ import Marquee from 'react-fast-marquee';
 export const HelloDetails = () => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
   return (
-    <div>
-      <h1 className="text_heading_size mt-10 py-5 text-center font-Monserrat  font-bold sm:mt-20">
-        <span className="text-primary">Atharv Naik</span> <br />
-        Full Stack Developer
-      </h1>
-      <div className="flex items-center justify-center gap-5 text-2xl text-blue-500 sm:text-3xl xl:text-4xl 2xl:text-5xl">
-        {renderSocialMediaLinks()}
-      </div>
-    </div>
+   <div>
+  <h1 className="text_heading_size mt-10 py-5 text-center font-Monserrat font-bold sm:mt-20">
+    Hi, I'm <span className="text-primary">Atharv Naik</span> <br />
+    Full Stack Developer
+  </h1>
+
+  <h2 className="text-center text-md sm:text-lg md:text-xl font-Monserrat text-gray-400 mb-4">
+    Building scalable backend & frontend systems using Node.js, React, Next.js, Kafka, 
+    ClickHouse, MySQL & TypeScript.
+  </h2>
+
+  <div className="flex items-center justify-center gap-5 text-2xl text-blue-500 sm:text-3xl xl:text-4xl 2xl:text-5xl">
+    {renderSocialMediaLinks()}
+  </div>
+</div>
   );
 };
 
