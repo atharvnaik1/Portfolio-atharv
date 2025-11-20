@@ -11,7 +11,7 @@ export const HelloDetails = () => {
   return (
    <div>
   <h1 className="text_heading_size mt-10 py-5 text-center font-Monserrat font-bold sm:mt-20">
-    Hi, I'm <span className="text-primary">Atharv Naik</span> <br />
+    <span className="text-primary">Atharv Naik</span> <br />
     Full Stack Developer(Open to work)
   </h1>
 
