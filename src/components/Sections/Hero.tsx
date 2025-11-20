@@ -12,7 +12,7 @@ export const HelloDetails = () => {
    <div>
   <h1 className="text_heading_size mt-10 py-5 text-center font-Monserrat font-bold sm:mt-20">
     <span className="text-primary">Atharv Naik</span> <br />
-    Full Stack Developer(Open to work)
+    Full Stack Developer
   </h1>
 
   <h2 className="text-center text-md sm:text-lg md:text-xl font-Monserrat text-gray-400 mb-4">
