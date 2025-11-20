@@ -20,9 +20,9 @@ export const metadata: Metadata = {
  title: "Atharv Naik — Full Stack Developer",
   description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.async-atharv ",
    keywords: [
-     "async atharv",
+     "Atharv Naik",
      "async-atharv",
-    "Atharv Naik",
+    "async atharv",
     "Full Stack Developer",
     "Node.js Developer",
     "React.js Developer",
@@ -40,6 +40,14 @@ export const metadata: Metadata = {
     title: "Atharv Naik — Full Stack Developer",
     description: "Atharv Naik is a Full Stack Developer building scalable web apps with Node.js, React, Next.js, Kafka, ClickHouse, MySQL. Startup-perfect, wears multiple hats.",
     type: "website",
+     images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Atharv Naik",
+      },
+    ],
   },
 };
 
