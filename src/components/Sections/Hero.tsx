@@ -12,12 +12,11 @@ export const HelloDetails = () => {
    <div>
   <h1 className="text_heading_size mt-10 py-5 text-center font-Monserrat font-bold sm:mt-20">
     Hi, I'm <span className="text-primary">Atharv Naik</span> <br />
-    Full Stack Developer
+    Full Stack Developer(Open to work)
   </h1>
 
   <h2 className="text-center text-md sm:text-lg md:text-xl font-Monserrat text-gray-400 mb-4">
-    Building scalable backend & frontend systems using Node.js, React, Next.js, Kafka, 
-    ClickHouse, MySQL & TypeScript.
+    Builds scalable backend systems using kafka, Clickhouse along with iOS app Development.
   </h2>
 
   <div className="flex items-center justify-center gap-5 text-2xl text-blue-500 sm:text-3xl xl:text-4xl 2xl:text-5xl">
