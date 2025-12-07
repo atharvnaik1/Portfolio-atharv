@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
           className="py-8"
         >
           <h2 className="text-center text-lg md:text-xl font-semibold my-4">
-            Featured / Highlighted Work
+            Featured
           </h2>
           <p className="text-center text-gray-400 max-w-3xl mx-auto px-4"></p>
 
