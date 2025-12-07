@@ -147,22 +147,7 @@ const Hero: React.FC = () => {
         <section id="intro-projects" aria-label="Intro and featured projects" className="py-8">
           <h2 className="text-center text-lg md:text-xl font-semibold my-4">Featured / Highlighted Work</h2>
           <p className="text-center text-gray-400 max-w-3xl mx-auto px-4">
-            A selection of projects I built — backend systems, mobile apps and experimental AI / Web3 work.
-            Full lists are below.
-          </p>
-        </section>
-
-        <section id="contact-me" className="py-8" aria-label="Contact me">
-          <h3 className="text-2xl font-semibold mb-3 text-center">Contact</h3>
-          <p className="text-center">
-            Email:{' '}
-            <a
-              href="mailto:atharvajaynaik.com"
-              className="text-primary underline"
-              rel="noopener noreferrer"
-            >
-              atharvajaynaik.com
-            </a>
+           
           </p>
         </section>
       </main>
