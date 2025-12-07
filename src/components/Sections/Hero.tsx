@@ -75,6 +75,8 @@ import useSocialMediaLinks from '@/hooks/useSocialMediaLinks';
 import { Chip } from '@nextui-org/react';
 import useSkills from '@/hooks/useSkills';
 import Marquee from 'react-fast-marquee';
+import ProjectCard from '../Cards/ProjectCard';
+import { personalProjects } from '@/assests/data/projectsData';
 
 export const HelloDetails: React.FC = () => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
