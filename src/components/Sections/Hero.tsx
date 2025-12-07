@@ -144,11 +144,29 @@ const Hero: React.FC = () => {
           </div>
         </section>
 
-        <section id="intro-projects" aria-label="Intro and featured projects" className="py-8">
-          <h2 className="text-center text-lg md:text-xl font-semibold my-4">Featured / Highlighted Work</h2>
-          <p className="text-center text-gray-400 max-w-3xl mx-auto px-4">
-           
-          </p>
+        <section
+          id="intro-projects"
+          aria-label="Intro and featured projects"
+          className="py-8"
+        >
+          <h2 className="text-center text-lg md:text-xl font-semibold my-4">
+            Featured / Highlighted Work
+          </h2>
+          <p className="text-center text-gray-400 max-w-3xl mx-auto px-4"></p>
+
+          <div className="mb-10 mt-6 w-[100vw] rotate-[-4deg] md:mb-20">
+            <Marquee direction="right" pauseOnHover={true}>
+              {Object.keys(personalProjects).map((key, index) => {
+                const item =
+                  personalProjects[key as keyof typeof personalProjects];
+                return (
+                  <div className="mx-2" key={index}>
+                    <ProjectCard projectDetail={item} />
+                  </div>
+                );
+              })}
+            </Marquee>
+          </div>
         </section>
       </main>
     </>
