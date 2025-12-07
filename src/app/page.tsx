@@ -1,15 +1,15 @@
-// import Footer from '@/components/Sections/Footer';
-// import Hero from '@/components/Sections/Hero';
-// import { Divider } from '@nextui-org/react';
+import Footer from '@/components/Sections/Footer';
+import Hero from '@/components/Sections/Hero';
+import { Divider } from '@nextui-org/react';
 
-// import {
-//   web3Projects,
-//   opensourceProjects,
-//   personalProjects
-// } from '@/assests/data/projectsData';
+import {
+  web3Projects,
+  opensourceProjects,
+  personalProjects
+} from '@/assests/data/projectsData';
 
-// import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
-// import Navigation from '@/components/Navigation/Navigation';
+import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
+import Navigation from '@/components/Navigation/Navigation';
 // // import { Atharv } from '@/components/Sections/Atharv';
 
 // // export const metadata = {
