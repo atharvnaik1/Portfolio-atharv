@@ -88,6 +88,22 @@ export default function Home() {
           }}
         />
       </section>
+      <section id="contact-me" aria-label="Contact me" className="py-16">
+  <h2 className="text-center text-3xl font-bold mb-4">Contact Me</h2>
+  <p className="text-center text-gray-400 text-lg">
+    Feel free to reach out anytime 👇
+  </p>
+
+  <div className="text-center mt-4">
+    <a
+      href="mailto:atharvajaynaik.com"
+      className="text-primary underline text-xl"
+    >
+      atharvajaynaik.com
+    </a>
+  </div>
+</section>
+
 
      <Divider className="bg-divider" />
 <footer id="footer">
