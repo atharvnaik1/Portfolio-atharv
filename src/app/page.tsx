@@ -89,9 +89,11 @@ export default function Home() {
         />
       </section>
 
-      <Divider className="bg-divider" />
-      <Footer id="footer" />
-    </main>
+     <Divider className="bg-divider" />
+<footer id="footer">
+  <Footer />
+</footer>
+</main>
   );
 }
 
