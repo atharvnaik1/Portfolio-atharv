@@ -32,7 +32,7 @@ export default function useSocialMediaLinks() {
       icon: <FaEnvelope />
     },
     resume: {
-      link: 'https://drive.google.com/file/d/1lUQFLkkNINK-qG8TruwqFLJO2cLjzFyR/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/1lUQFK-qG8TruwqFLJO2cLjzFyR/view?usp=sharing',
       icon: <span className="material-icons">Resume</span> 
     }
 
