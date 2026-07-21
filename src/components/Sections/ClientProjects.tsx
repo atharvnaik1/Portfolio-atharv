@@ -70,7 +70,7 @@ export default function ClientProjects() {
             ))}
           </div>
         </div>
-      </div> */} */}
+      </div> */}
 
       <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
         <h2 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
