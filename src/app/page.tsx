@@ -9,7 +9,6 @@ import {
 } from '@/assests/data/projectsData';
 
 import ProjectsCarousel from '@/components/Sections/ProjectsCarousel';
-import ClientProjects from '@/components/Sections/ClientProjects';
 import Navigation from '@/components/Navigation/Navigation';
 // // import { Atharv } from '@/components/Sections/Atharv';
 
@@ -64,9 +63,6 @@ export default function Home() {
         <Navigation />
         <Hero />
       </div>
-
-      <ClientProjects />
-
       <section id="personal-projects" aria-label="Personal projects" className="py-8">
         <ProjectsCarousel
           projects={personalProjects}
