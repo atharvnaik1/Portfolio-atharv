@@ -28,7 +28,7 @@ export default function ClientProjects() {
       aria-label="Successful clients projects"
       className="py-8"
     >
-      <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
+      {/* <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
         <h1 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
           Successful Clients Projects
         </h1>
@@ -38,7 +38,7 @@ export default function ClientProjects() {
         </p>
 
         {/* Top shelf — advertisement / agency showcase */}
-        <div className="mb-8 overflow-hidden rounded-2xl border border-[#ffffff14] bg-gradient-to-br from-[#0b1220] via-[#121a2b] to-[#1a1030] p-4 shadow-xl md:p-6">
+        {/* <div className="mb-8 overflow-hidden rounded-2xl border border-[#ffffff14] bg-gradient-to-br from-[#0b1220] via-[#121a2b] to-[#1a1030] p-4 shadow-xl md:p-6">
           <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/90">
@@ -51,17 +51,17 @@ export default function ClientProjects() {
                 {agencyShowcase.subtitle}
               </p>
             </div>
-          </div>
+          </div> */}
 
-          <Image
+          {/* <Image
             src={agencyShowcase.image}
             alt="AI-native agency product showcase"
             className="h-auto w-full rounded-xl object-cover"
             width={1400}
             height={933}
-          />
+          /> */}
 
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {/* <div className="mt-6 grid gap-4 md:grid-cols-3">
             {credibilityPoints.map((point) => (
               <div key={point.title} className="rounded-xl bg-white/5 p-4">
                 <h3 className="font-semibold text-white">{point.title}</h3>
@@ -70,7 +70,7 @@ export default function ClientProjects() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */} */}
 
       <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
         <h2 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
