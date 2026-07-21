@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { Image } from '@nextui-org/react';
+import Marquee from 'react-fast-marquee';
 import { agencyShowcase, clientProjects } from '@/assests/data/projectsData';
-import ProjectsCarousel from './ProjectsCarousel';
+import ClientAppCard from '../Cards/ClientAppCard';
 
 const credibilityPoints = [
   {
@@ -71,14 +72,24 @@ export default function ClientProjects() {
         </div>
       </div>
 
-      <ProjectsCarousel
-        projects={clientProjects}
-        heading="Live Client Apps"
-        carouselSettings={{
-          slidesToScroll: 1,
-          slidesToShow: 2
-        }}
-      />
+      <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
+        <h2 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
+          Live Client Apps
+        </h2>
+      </div>
+
+      <div className="mb-8 mt-4 w-[100vw] rotate-[-2deg] overflow-hidden">
+        <Marquee pauseOnHover={true} speed={32} gradient={false}>
+          {Object.keys(clientProjects).map((key, index) => {
+            const item = clientProjects[key as keyof typeof clientProjects];
+            return (
+              <div className="mx-3 py-4" key={index}>
+                <ClientAppCard projectDetail={item} />
+              </div>
+            );
+          })}
+        </Marquee>
+      </div>
     </section>
   );
 }

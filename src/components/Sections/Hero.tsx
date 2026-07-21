@@ -77,6 +77,7 @@ import useSkills from '@/hooks/useSkills';
 import Marquee from 'react-fast-marquee';
 import ProjectCard from '../Cards/ProjectCard';
 import { personalProjects } from '@/assests/data/projectsData';
+import ClientProjects from './ClientProjects';
 
 export const HelloDetails: React.FC = () => {
   const { renderSocialMediaLinks } = useSocialMediaLinks();
@@ -145,6 +146,8 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <ClientProjects />
 
         <section
           id="intro-projects"
