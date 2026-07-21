@@ -3,17 +3,21 @@ import { OneSkillObjectType, allSkills } from '@/hooks/useSkills';
 export enum ProjectType {
   Personal = 'Personal',
   AIWeb3 = 'AIWeb3',
-  OpenSource = 'OpenSource'
+  OpenSource = 'OpenSource',
+  Client = 'Client'
 }
 
 export type ProjectDataType = {
   name: string;
   des: string;
-  demo: string;
-  github: string;
+  demo?: string;
+  github?: string;
   image: string;
   skills: OneSkillObjectType[];
   type: ProjectType;
+  appStore?: string;
+  playStore?: string;
+  featured?: boolean;
 };
 
 export type ProjectsObjectType = {
@@ -154,6 +158,100 @@ export const opensourceProjects: ProjectsObjectType = {
     ],
     type: ProjectType.OpenSource
   }
+};
+
+/** Successful client apps — display order: 7 → 1 (Founders Bridge last). */
+export const clientProjects: ProjectsObjectType = {
+  OrgOrbit: {
+    name: 'OrgOrbit',
+    des: 'AI-native community super-app to mobilize orgs — custom AI modules & insights, fundraising, multi-format posts, and engagement analytics for leaders.',
+    image: '/images/projects/clients/orgorbit.webp',
+    skills: [
+      allSkills.reactjs,
+      allSkills.typescript,
+      allSkills.nodejs,
+      allSkills.nextjs
+    ],
+    type: ProjectType.Client,
+    appStore: 'https://apps.apple.com/in/app/orgorbit/id6479863473',
+    playStore:
+      'https://play.google.com/store/apps/details?id=com.purpus&pcampaignid=web_share'
+  },
+  JapaRuchi: {
+    name: 'MahaMantra Japa Ruchi',
+    des: 'AI-assisted spiritual practice app — chant detection, progress analytics, leaderboards, and community engagement built for daily devotion.',
+    image: '/images/projects/clients/japa-ruchi.webp',
+    skills: [
+      allSkills.reactjs,
+      allSkills.typescript,
+      allSkills.nodejs,
+      allSkills.python
+    ],
+    type: ProjectType.Client,
+    appStore:
+      'https://apps.apple.com/in/app/mahamantra-japa-ruchi/id6754645747',
+    playStore:
+      'https://play.google.com/store/apps/details?id=com.orgorbit.japa&pcampaignid=web_share'
+  },
+  BetweenBreaks: {
+    name: 'BetweenBreaks',
+    des: 'Campus socializing & career network — instant messaging, AI resume editing with role-based suggestions, and Handshake-style connections.',
+    image: '/images/projects/clients/between-breaks.webp',
+    skills: [
+      allSkills.nextjs,
+      allSkills.typescript,
+      allSkills.nodejs,
+      allSkills.tailwindcss
+    ],
+    type: ProjectType.Client
+  },
+  WhyNew: {
+    name: 'Why New',
+    des: '2nd-hand mobile marketplace — verified listings, doorstep pickup flows, instant payments, and a high-conversion sell/exchange experience.',
+    image: '/images/projects/clients/why-new.webp',
+    skills: [
+      allSkills.reactjs,
+      allSkills.typescript,
+      allSkills.nodejs,
+      allSkills.tailwindcss
+    ],
+    type: ProjectType.Client,
+    appStore: 'https://apps.apple.com/in/app/why-new/id6760283075'
+  },
+  KavachQR: {
+    name: 'Kavach QR',
+    des: 'Smart vehicle safety ecosystem — QR identity, AI-powered ambulance/towing dispatch, live tracking, and partner analytics (Uber for ambulances).',
+    image: '/images/projects/clients/kavach-qr.webp',
+    skills: [
+      allSkills.nextjs,
+      allSkills.typescript,
+      allSkills.nodejs,
+      allSkills.python
+    ],
+    type: ProjectType.Client,
+    appStore: 'https://apps.apple.com/in/app/kavach-qr/id6479373315',
+    playStore:
+      'https://play.google.com/store/apps/details?id=com.kavach.qr&pcampaignid=web_share'
+  },
+  FoundersBridge: {
+    name: 'Founders Bridge',
+    des: 'Legal & compliance portal for firms — marketplace services, billing ops, task workflows, and admin tooling for GST, ROC, tax, and startup filings.',
+    image: '/images/projects/clients/founders-bridge.webp',
+    skills: [
+      allSkills.reactjs,
+      allSkills.typescript,
+      allSkills.nodejs,
+      allSkills.tailwindcss
+    ],
+    type: ProjectType.Client
+  }
+};
+
+export const agencyShowcase = {
+  image: '/images/projects/clients/agency-showcase.webp',
+  title: 'Not just screens. Real product depth.',
+  subtitle:
+    'AI-native product studio — shipping production apps with analytics, engagement, and community features built to be used.'
 };
 
 export const web3Projects: ProjectsObjectType = {
