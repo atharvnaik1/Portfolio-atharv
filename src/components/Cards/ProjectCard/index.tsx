@@ -8,7 +8,7 @@ import {
   ScrollShadow
 } from '@nextui-org/react';
 import { styles } from '@/styles/styles';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaApple, FaGooglePlay } from 'react-icons/fa';
 import { ProjectDataType } from '@/assests/data/projectsData';
 
 type ProjectCardProps = {
@@ -20,6 +20,12 @@ export default function ProjectCard({
   projectDetail,
   classNames
 }: ProjectCardProps) {
+  const hasStores = Boolean(
+    projectDetail.appStore || projectDetail.playStore
+  );
+  const hasGithub = Boolean(projectDetail.github);
+  const hasDemo = Boolean(projectDetail.demo);
+
   return (
     <div
       className={`w-[320px] overflow-hidden  rounded-xl border-none bg-background/60 p-3 shadow-lg md:w-[400px] ${classNames}`}
@@ -27,7 +33,7 @@ export default function ProjectCard({
       <div className="relative">
         <Image
           src={projectDetail.image}
-          alt=""
+          alt={projectDetail.name}
           className="!max-h-[200px] w-full object-cover"
           width={390}
           height={300}
@@ -60,17 +66,54 @@ export default function ProjectCard({
       </div>
 
       <Divider className="my-3 bg-[#ffffff18]" />
-      <div className="flex w-full justify-between px-4">
-        <Link href={projectDetail.github} target="_blank">
-          <Button isIconOnly color="primary" variant="bordered">
-            <FaGithub />
-          </Button>
-        </Link>
-        <Link href={projectDetail.demo} target="_blank">
-          <Button color="primary" variant="bordered" href={projectDetail.demo}>
-            Demo
-          </Button>
-        </Link>
+      <div className="flex w-full flex-wrap items-center justify-between gap-2 px-1">
+        {hasStores ? (
+          <div className="flex w-full items-center justify-center gap-3">
+            {projectDetail.appStore ? (
+              <Link href={projectDetail.appStore} target="_blank">
+                <Button
+                  color="primary"
+                  variant="bordered"
+                  startContent={<FaApple className="text-lg" />}
+                  aria-label={`${projectDetail.name} on App Store`}
+                >
+                  App Store
+                </Button>
+              </Link>
+            ) : null}
+            {projectDetail.playStore ? (
+              <Link href={projectDetail.playStore} target="_blank">
+                <Button
+                  color="success"
+                  variant="bordered"
+                  startContent={<FaGooglePlay className="text-lg" />}
+                  aria-label={`${projectDetail.name} on Play Store`}
+                >
+                  Play Store
+                </Button>
+              </Link>
+            ) : null}
+          </div>
+        ) : (
+          <>
+            {hasGithub ? (
+              <Link href={projectDetail.github} target="_blank">
+                <Button isIconOnly color="primary" variant="bordered">
+                  <FaGithub />
+                </Button>
+              </Link>
+            ) : (
+              <span />
+            )}
+            {hasDemo ? (
+              <Link href={projectDetail.demo} target="_blank">
+                <Button color="primary" variant="bordered">
+                  Demo
+                </Button>
+              </Link>
+            ) : null}
+          </>
+        )}
       </div>
     </div>
   );
