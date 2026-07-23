@@ -143,7 +143,7 @@ const Hero: React.FC = () => {
             </span>{' '}
             and unlocked{' '}
             <span className="font-semibold text-white">
-              multi-lakh monthly recurring outcomes
+              5-10 lakh monthly recurring outcomes
             </span>{' '}
             for client businesses.
           </p>
