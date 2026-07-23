@@ -69,6 +69,7 @@ import React, { useState } from 'react';
 const navItems = [
   { title: 'Hello', href: '#title' },
   { title: 'Social', href: '#social-content' },
+  { title: 'About', href: '#about-me' },
   { title: 'Skills', href: '#skills' },
   { title: 'Clients', href: '#successful-clients' },
   { title: 'Featured', href: '#intro-projects' },
