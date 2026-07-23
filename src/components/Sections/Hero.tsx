@@ -121,6 +121,45 @@ const Hero: React.FC = () => {
       <main>
         <HelloDetails />
 
+        <section
+          id="about-me"
+          aria-label="About me"
+          className="mx-auto mt-10 w-[92%] max-w-4xl px-4 text-center md:mt-14"
+        >
+          <h2 className="animate_charcter text_sub_heading_size font-Monserrat font-semibold">
+            About Me
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-gray-300 md:text-lg">
+            With{' '}
+            <span className="font-semibold text-white">7 years of experience</span>{' '}
+            building production apps for{' '}
+            <span className="font-semibold text-white">
+              Google ecosystems, MNCs, and high-growth startups
+            </span>
+            , I help founders turn product ideas into revenue engines — shipping
+            apps that have driven{' '}
+            <span className="font-semibold text-primary">
+              2–3× revenue growth
+            </span>{' '}
+            and unlocked{' '}
+            <span className="font-semibold text-white">
+              multi-lakh monthly recurring outcomes
+            </span>{' '}
+            for client businesses.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-gray-400 md:text-lg">
+            Several products I&apos;ve built have helped startups raise{' '}
+            <span className="font-semibold text-white">
+              seed funding through Startup India
+            </span>
+            , and one shipped product was accepted into{' '}
+            <span className="font-semibold text-white">
+              Microsoft for Startups
+            </span>{' '}
+            — combining AI-native engineering with real commercial traction.
+          </p>
+        </section>
+
         <section id="skills" aria-label="Skills section" className="mt-8">
           <h3 className="sr-only">Skills</h3>
           <div className="mt-6 w-full md:mt-10">
