@@ -23,7 +23,7 @@ export default function useSocialMediaLinks() {
       icon: <FaTwitter />
     },
     youtube: {
-      link: 'https://www.youtube.com/@Asyncccc',
+      link: 'https://www.youtube.com/@IpashipAI',
       icon: <FaYoutube />
     },
 
@@ -31,10 +31,10 @@ export default function useSocialMediaLinks() {
       link: 'mailto:atharvajaynaik@gmail.com', 
       icon: <FaEnvelope />
     },
-    resume: {
-      link: 'https://drive.google.com/file/d/1lUQFK-qG8TruwqFLJO2cLjzFyR/view?usp=sharing',
-      icon: <span className="material-icons">Resume</span> 
-    }
+    // resume: {
+    //   link: 'https://drive.google.com/file/d/1lUQFK-qG8TruwqFLJO2cLjzFyR/view?usp=sharing',
+    //   icon: <span className="material-icons">Resume</span> 
+    // }
 
   };
 
