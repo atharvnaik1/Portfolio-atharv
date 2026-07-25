@@ -1,74 +1,11 @@
-// import Link from 'next/link';
-// import React from 'react';
-
-// const navItems = [
-//   {
-//     title: 'Hello',
-//     href: '#hello'
-//   }
-// ];
-
-// const Navigation = () => {
-//   // const [active, setactive] = useState(false);
-
-//   // if (typeof window !== "undefined") {
-//   //   window.addEventListener("scroll", () => {
-//   //     if (window.scrollY > 100) {
-//   //       setactive(true);
-//   //     } else {
-//   //       setactive(false);
-//   //     }
-//   //   });
-//   // }
-
-//   return (
-//     <nav
-//       // className={`w-full px-5 py-8 border-b min-h-[60px] border-b-[#ffffff32] transition-opacity ${active && "fixed top-0 left-0  z-[9999]"
-//       //   }`}
-//       className={`} min-h-[60px] w-full border-b border-b-divider px-5  py-8`}
-//     >
-//       <div className="flex items-center justify-between ">
-//         <div className="block md:flex">
-//           {navItems.map((item, index) => (
-//             <Link key={index} href={item.href}>
-//               <h5
-//                 className={`inline-block py-5 font-Inter text-2xl font-[500] text-primary md:px-4 md:py-0 xl:px-8 `}
-//               >
-//                 {item.title}
-//               </h5>
-//             </Link>
-//           ))}
-//         </div>
-//         <div>
-//           <Link href={'/'}>
-//             <h1 className="cursor-pointer text-2xl font-semibold">
-//               <span className="text-blue-500">@Atharv</span>
-//               Naik
-//             </h1>
-//           </Link>
-//         </div>
-//         {/* <div className="flex items-center ml-10">
-//         <div>
-//           <DropDown
-//             setOpen={setOpen}
-//             handleProfile={handleProfile}
-//           />
-//         </div>
-//       </div> */}
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navigation;
-"use client";
+'use client';
 
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const navItems = [
   { title: 'Hello', href: '#title' },
-  { title: 'Social', href: '#social-content' },
   { title: 'About', href: '#about-me' },
   { title: 'Skills', href: '#skills' },
   { title: 'Clients', href: '#successful-clients' },
@@ -81,72 +18,136 @@ const navItems = [
 
 const Navigation: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 18);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   return (
-    <nav
-      className="min-h-[60px] w-full border-b border-b-divider px-5 py-4 bg-background"
+    <motion.nav
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.55, ease: 'easeOut' }}
+      className={`sticky top-0 z-[100] w-full px-4 py-3 transition-all duration-300 sm:px-5 ${
+        scrolled
+          ? 'border-b border-white/10 bg-[#0b0818]/80 shadow-[0_10px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl'
+          : 'border-b border-transparent bg-transparent'
+      }`}
       role="navigation"
       aria-label="Primary navigation"
+      style={{ perspective: 1000 }}
     >
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
-        <div className="flex items-center gap-6">
-          <Link href={'/'}>
-            <a className="cursor-pointer text-2xl font-semibold flex items-baseline" aria-label="Home">
-              <span className="text-blue-500">@Atharv</span>
-              <span className="ml-2">Naik</span>
-            </a>
-          </Link>
-        </div>
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
+        <Link
+          href="/"
+          className="group relative inline-flex items-baseline text-xl font-semibold sm:text-2xl"
+          aria-label="Home"
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          <motion.span
+            whileHover={{ rotateY: -8, z: 12 }}
+            className="text-primary transition-colors"
+          >
+            @Atharv
+          </motion.span>
+          <span className="ml-1.5 text-white">Naik</span>
+        </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-4">
-          {navItems.map((item, index) => (
-            <a key={index} href={item.href} className="inline-block py-2 px-3 text-base font-medium text-primary hover:underline">
+        <div className="hidden items-center gap-1 lg:flex">
+          {navItems.map((item) => (
+            <motion.a
+              key={item.href}
+              href={item.href}
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 20 }}
+              className="rounded-lg px-2.5 py-2 text-sm font-medium text-white/80 hover:bg-white/5 hover:text-primary xl:px-3"
+              style={{ transformStyle: 'preserve-3d' }}
+            >
               {item.title}
-            </a>
+            </motion.a>
           ))}
         </div>
 
-        {/* Mobile hamburger */}
-        <div className="md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href="#contact-me"
+            className="rounded-lg border border-primary/40 bg-primary/15 px-3 py-1.5 text-xs font-semibold text-white sm:text-sm"
+          >
+            Hire Me
+          </a>
           <button
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="p-2 rounded-md focus:outline-none focus:ring"
+            className="rounded-lg border border-white/15 bg-white/5 p-2 focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
               {open ? (
-                <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M6 6L18 18M6 18L18 6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               ) : (
-                <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               )}
             </svg>
           </button>
         </div>
       </div>
 
-      {/* Mobile menu panel */}
-      {open && (
-        <div className="md:hidden mt-3 px-5 pb-4 animate-fade-in" role="menu" aria-label="Mobile menu">
-          <div className="flex flex-col gap-2">
-            {navItems.map((item, idx) => (
-              <a
-                key={idx}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="block py-3 px-2 text-base font-medium rounded hover:bg-surface/10"
-                role="menuitem"
-              >
-                {item.title}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            key="mobile-menu"
+            initial={{ opacity: 0, rotateX: -12, y: -8 }}
+            animate={{ opacity: 1, rotateX: 0, y: 0 }}
+            exit={{ opacity: 0, rotateX: -8, y: -6 }}
+            transition={{ duration: 0.25 }}
+            className="mt-3 origin-top rounded-2xl border border-white/10 bg-[#100b1f]/95 p-3 shadow-2xl backdrop-blur-xl lg:hidden"
+            role="menu"
+            aria-label="Mobile menu"
+            style={{ transformStyle: 'preserve-3d' }}
+          >
+            <div className="grid max-h-[70vh] grid-cols-2 gap-2 overflow-y-auto sm:grid-cols-3">
+              {navItems.map((item, idx) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.03 }}
+                  className="rounded-xl bg-white/5 px-3 py-3 text-center text-sm font-medium text-white hover:bg-primary/20"
+                  role="menuitem"
+                >
+                  {item.title}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </motion.nav>
   );
 };
 
 export default Navigation;
-

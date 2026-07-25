@@ -69,41 +69,19 @@
 // };
 
 // export default Hero;
+'use client';
+
 import React from 'react';
 import Head from 'next/head';
-import useSocialMediaLinks from '@/hooks/useSocialMediaLinks';
 import { Chip } from '@nextui-org/react';
 import useSkills from '@/hooks/useSkills';
 import Marquee from 'react-fast-marquee';
 import ProjectCard from '../Cards/ProjectCard';
 import { personalProjects } from '@/assests/data/projectsData';
 import ClientProjects from './ClientProjects';
+import HeroIntro from './HeroIntro';
 
-export const HelloDetails: React.FC = () => {
-  const { renderSocialMediaLinks } = useSocialMediaLinks();
-  return (
-    <section id="title" aria-label="Hero title" className="pt-8">
-      <h1 className="text_heading_size mt-6 py-4 text-center font-Monserrat font-bold sm:mt-12">
-        <span className="text-primary">Atharv Naik</span> <br />
-        Full Stack Developer
-      </h1>
-
-      <h2
-        id="social-content"
-        className="text-center text-md sm:text-lg md:text-xl font-Monserrat text-gray-400 mb-4"
-      >
-        Builds scalable backend systems using Kafka, ClickHouse along with iOS app development.
-      </h2>
-
-      <div
-        className="flex items-center justify-center gap-5 text-2xl text-blue-500 sm:text-3xl xl:text-4xl 2xl:text-5xl"
-        aria-label="Social links"
-      >
-        {renderSocialMediaLinks()}
-      </div>
-    </section>
-  );
-};
+export { default as HelloDetails } from './HeroIntro';
 
 const Hero: React.FC = () => {
   const { allSkills } = useSkills();
@@ -119,12 +97,12 @@ const Hero: React.FC = () => {
       </Head>
 
       <main>
-        <HelloDetails />
+        <HeroIntro />
 
         <section
           id="about-me"
           aria-label="About me"
-          className="mx-auto mt-10 w-[92%] max-w-4xl px-4 text-center md:mt-14"
+          className="mx-auto mt-8 w-[92%] max-w-4xl px-4 text-center md:mt-12"
         >
           <h2 className="animate_charcter text_sub_heading_size font-Monserrat font-semibold">
             About Me
