@@ -138,9 +138,13 @@ const Hero: React.FC = () => {
           </p>
         </section>
 
-        <section id="skills" aria-label="Skills section" className="mt-8">
+        <section
+          id="skills"
+          aria-label="Skills section"
+          className="mt-10 pb-10 md:mt-14 md:pb-16"
+        >
           <h3 className="sr-only">Skills</h3>
-          <div className="mt-6 w-full md:mt-10">
+          <div className="mt-6 w-full overflow-hidden py-6 md:mt-10 md:py-10">
             <div className="w-[100vw] rotate-[-4deg]">
               <Marquee pauseOnHover={true}>
                 {Object.keys(allSkills).map((key, index) => {

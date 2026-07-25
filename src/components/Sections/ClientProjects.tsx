@@ -26,15 +26,15 @@ export default function ClientProjects() {
     <section
       id="successful-clients"
       aria-label="Successful clients projects"
-      className="py-8"
+      className="mt-4 px-2 py-12 md:mt-8 md:py-16"
     >
       <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
-        <div className="flex flex-col gap-3 px-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
+        <div className="flex flex-col gap-4 px-2 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-2">
             <h2 className="animate_charcter text_sub_heading_size font-Monserrat font-semibold">
               Live Client Apps
             </h2>
-            <p className="mt-1 text-sm text-gray-400 md:text-base">
+            <p className="text-sm text-gray-400 md:text-base">
               Tap phones to flip screens. Pause auto-scroll anytime to browse
               manually.
             </p>
