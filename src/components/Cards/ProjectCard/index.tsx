@@ -24,7 +24,6 @@ export default function ProjectCard({
     projectDetail.appStore || projectDetail.playStore
   );
   const hasGithub = Boolean(projectDetail.github);
-  const hasDemo = Boolean(projectDetail.demo);
 
   return (
     <div
@@ -94,26 +93,13 @@ export default function ProjectCard({
               </Link>
             ) : null}
           </div>
-        ) : (
-          <>
-            {hasGithub ? (
-              <Link href={projectDetail.github} target="_blank">
-                <Button isIconOnly color="primary" variant="bordered">
-                  <FaGithub />
-                </Button>
-              </Link>
-            ) : (
-              <span />
-            )}
-            {hasDemo ? (
-              <Link href={projectDetail.demo} target="_blank">
-                <Button color="primary" variant="bordered">
-                  Demo
-                </Button>
-              </Link>
-            ) : null}
-          </>
-        )}
+        ) : hasGithub ? (
+          <Link href={projectDetail.github} target="_blank">
+            <Button isIconOnly color="primary" variant="bordered">
+              <FaGithub />
+            </Button>
+          </Link>
+        ) : null}
       </div>
     </div>
   );
