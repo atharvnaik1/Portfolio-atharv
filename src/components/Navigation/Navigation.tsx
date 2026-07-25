@@ -82,7 +82,9 @@ const Navigation: React.FC = () => {
 
         <div className="flex items-center gap-2 lg:hidden">
           <a
-            href="#contact-me"
+            href="https://lp.ipaship.com/apply"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg border border-primary/40 bg-primary/15 px-3 py-1.5 text-xs font-semibold text-white sm:text-sm"
           >
             Hire Me
