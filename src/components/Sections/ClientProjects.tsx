@@ -76,14 +76,17 @@ export default function ClientProjects() {
         <h2 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
           Live Client Apps
         </h2>
+        <p className="px-2 text-sm text-gray-400 md:text-base">
+          Tap any phone stack to flip through real product screens.
+        </p>
       </div>
 
-      <div className="mb-8 mt-4 w-[100vw] rotate-[-2deg] overflow-hidden">
-        <Marquee pauseOnHover={true} speed={32} gradient={false}>
-          {Object.keys(clientProjects).map((key, index) => {
+      <div className="mb-8 mt-4 w-[100vw] overflow-hidden md:rotate-[-1deg]">
+        <Marquee pauseOnHover={true} speed={28} gradient={false}>
+          {Object.keys(clientProjects).map((key) => {
             const item = clientProjects[key as keyof typeof clientProjects];
             return (
-              <div className="mx-3 py-4" key={index}>
+              <div className="mx-4 py-6" key={key}>
                 <ClientAppCard projectDetail={item} />
               </div>
             );
