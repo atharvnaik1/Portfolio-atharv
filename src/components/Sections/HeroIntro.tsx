@@ -155,7 +155,9 @@ export default function HeroIntro() {
               View Live Client Apps
             </a>
             <a
-              href="#contact-me"
+              href="https://lp.ipaship.com/apply"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto"
             >
               Book a Build Call
