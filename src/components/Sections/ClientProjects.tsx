@@ -1,97 +1,119 @@
 'use client';
 
-import React from 'react';
-import { Image } from '@nextui-org/react';
+import React, { useRef, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import { agencyShowcase, clientProjects } from '@/assests/data/projectsData';
+import { FaPause, FaPlay, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { clientProjects } from '@/assests/data/projectsData';
 import ClientAppCard from '../Cards/ClientAppCard';
 
-const credibilityPoints = [
-  {
-    title: 'AI-Native Builds',
-    body: 'Custom AI modules, role-based suggestions, and intelligent dispatch wired into real product flows.'
-  },
-  {
-    title: 'Shipped to Stores',
-    body: 'Production apps live on the App Store & Play Store — not mockups, not prototypes.'
-  },
-  {
-    title: 'Full-Stack Delivery',
-    body: 'Mobile UX, backends, analytics, payments, and community features owned end-to-end.'
-  }
-];
+const projectKeys = Object.keys(clientProjects);
 
 export default function ClientProjects() {
+  const [autoScroll, setAutoScroll] = useState(true);
+  const manualTrackRef = useRef<HTMLDivElement>(null);
+
+  const scrollManual = (direction: 'left' | 'right') => {
+    const el = manualTrackRef.current;
+    if (!el) return;
+    const amount = Math.min(340, el.clientWidth * 0.8);
+    el.scrollBy({
+      left: direction === 'left' ? -amount : amount,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section
       id="successful-clients"
       aria-label="Successful clients projects"
       className="py-8"
     >
-      {/* <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
-        <h1 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
-          Successful Clients Projects
-        </h1>
-        <p className="mb-6 max-w-3xl px-2 text-base text-gray-400 md:text-lg">
-          AI-native product work for startups — from emergency logistics and
-          community super-apps to marketplaces and compliance portals.
-        </p>
+      <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
+        <div className="flex flex-col gap-3 px-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="animate_charcter text_sub_heading_size font-Monserrat font-semibold">
+              Live Client Apps
+            </h2>
+            <p className="mt-1 text-sm text-gray-400 md:text-base">
+              Tap phones to flip screens. Pause auto-scroll anytime to browse
+              manually.
+            </p>
+          </div>
 
-        {/* Top shelf — advertisement / agency showcase */}
-        {/* <div className="mb-8 overflow-hidden rounded-2xl border border-[#ffffff14] bg-gradient-to-br from-[#0b1220] via-[#121a2b] to-[#1a1030] p-4 shadow-xl md:p-6">
-          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400/90">
-                AI-Native Agency
-              </p>
-              <h2 className="mt-1 font-Monserrat text-2xl font-bold text-white md:text-3xl">
-                {agencyShowcase.title}
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm text-gray-300 md:text-base">
-                {agencyShowcase.subtitle}
-              </p>
-            </div>
-          </div> */}
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setAutoScroll((v) => !v)}
+              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-white transition hover:bg-white/10 sm:text-sm"
+              aria-pressed={!autoScroll}
+              aria-label={autoScroll ? 'Pause auto scroll' : 'Play auto scroll'}
+            >
+              {autoScroll ? <FaPause /> : <FaPlay />}
+              {autoScroll ? 'Pause Auto' : 'Play Auto'}
+            </button>
 
-          {/* <Image
-            src={agencyShowcase.image}
-            alt="AI-native agency product showcase"
-            className="h-auto w-full rounded-xl object-cover"
-            width={1400}
-            height={933}
-          /> */}
-
-          {/* <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {credibilityPoints.map((point) => (
-              <div key={point.title} className="rounded-xl bg-white/5 p-4">
-                <h3 className="font-semibold text-white">{point.title}</h3>
-                <p className="mt-1 text-sm text-gray-400">{point.body}</p>
-              </div>
-            ))}
+            {!autoScroll ? (
+              <>
+                <button
+                  type="button"
+                  onClick={() => scrollManual('left')}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white transition hover:bg-white/10"
+                  aria-label="Scroll client apps left"
+                >
+                  <FaChevronLeft />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollManual('right')}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white transition hover:bg-white/10"
+                  aria-label="Scroll client apps right"
+                >
+                  <FaChevronRight />
+                </button>
+              </>
+            ) : null}
           </div>
         </div>
-      </div> */}
-
-      <div className="mx-auto w-[98%] md:w-[90%] 2xl:w-[85%]">
-        <h2 className="animate_charcter text_sub_heading_size p-2 font-Monserrat font-semibold">
-          Live Client Apps
-        </h2>
-        <p className="px-2 text-sm text-gray-400 md:text-base">
-          Tap any phone stack to flip through real product screens.
-        </p>
       </div>
 
       <div className="mb-8 mt-4 w-[100vw] overflow-hidden md:rotate-[-1deg]">
-        <Marquee pauseOnHover={true} speed={28} gradient={false}>
-          {Object.keys(clientProjects).map((key) => {
-            const item = clientProjects[key as keyof typeof clientProjects];
-            return (
-              <div className="mx-4 py-6" key={key}>
-                <ClientAppCard projectDetail={item} />
-              </div>
-            );
-          })}
-        </Marquee>
+        {autoScroll ? (
+          <Marquee
+            pauseOnHover={true}
+            pauseOnClick={true}
+            speed={28}
+            gradient={false}
+            play={autoScroll}
+          >
+            {projectKeys.map((key) => {
+              const item = clientProjects[key as keyof typeof clientProjects];
+              return (
+                <div className="mx-4 py-6" key={key}>
+                  <ClientAppCard projectDetail={item} />
+                </div>
+              );
+            })}
+          </Marquee>
+        ) : (
+          <div
+            ref={manualTrackRef}
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 py-6 scrollbar-thin scroll-smooth"
+            style={{
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'thin'
+            }}
+            aria-label="Manually scroll live client apps"
+          >
+            {projectKeys.map((key) => {
+              const item = clientProjects[key as keyof typeof clientProjects];
+              return (
+                <div className="snap-center shrink-0" key={key}>
+                  <ClientAppCard projectDetail={item} />
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </section>
   );
