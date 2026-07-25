@@ -13,6 +13,8 @@ export type ProjectDataType = {
   demo?: string;
   github?: string;
   image: string;
+  /** Extra screens for stacked / flip galleries (client apps). */
+  images?: string[];
   skills: OneSkillObjectType[];
   type: ProjectType;
   appStore?: string;
@@ -165,7 +167,14 @@ export const clientProjects: ProjectsObjectType = {
   OrgOrbit: {
     name: 'OrgOrbit',
     des: 'AI-native community super-app to mobilize orgs — custom AI modules & insights, fundraising, multi-format posts, and engagement analytics for leaders.',
-    image: '/images/projects/clients/orgorbit.webp',
+    image: '/images/projects/clients/orgorbit-1.webp',
+    images: [
+      '/images/projects/clients/orgorbit-1.webp',
+      '/images/projects/clients/orgorbit-2.webp',
+      '/images/projects/clients/orgorbit-3.webp',
+      '/images/projects/clients/orgorbit-4.webp',
+      '/images/projects/clients/orgorbit-5.webp'
+    ],
     skills: [
       allSkills.reactjs,
       allSkills.typescript,
@@ -180,7 +189,13 @@ export const clientProjects: ProjectsObjectType = {
   JapaRuchi: {
     name: 'MahaMantra Japa Ruchi',
     des: 'AI-assisted spiritual practice app — chant detection, progress analytics, leaderboards, and community engagement built for daily devotion.',
-    image: '/images/projects/clients/japa-ruchi.webp',
+    image: '/images/projects/clients/japa-ruchi-1.webp',
+    images: [
+      '/images/projects/clients/japa-ruchi-1.webp',
+      '/images/projects/clients/japa-ruchi-2.webp',
+      '/images/projects/clients/japa-ruchi-3.webp',
+      '/images/projects/clients/japa-ruchi-4.webp'
+    ],
     skills: [
       allSkills.reactjs,
       allSkills.typescript,
@@ -196,7 +211,12 @@ export const clientProjects: ProjectsObjectType = {
   BetweenBreaks: {
     name: 'BetweenBreaks',
     des: 'Campus socializing & career network — instant messaging, AI resume editing with role-based suggestions, and Handshake-style connections.',
-    image: '/images/projects/clients/between-breaks.webp',
+    image: '/images/projects/clients/between-breaks-1.webp',
+    images: [
+      '/images/projects/clients/between-breaks-1.webp',
+      '/images/projects/clients/between-breaks-2.webp',
+      '/images/projects/clients/between-breaks-3.webp'
+    ],
     skills: [
       allSkills.nextjs,
       allSkills.typescript,
@@ -208,7 +228,12 @@ export const clientProjects: ProjectsObjectType = {
   WhyNew: {
     name: 'Why New',
     des: '2nd-hand mobile marketplace — verified listings, doorstep pickup flows, instant payments, and a high-conversion sell/exchange experience.',
-    image: '/images/projects/clients/why-new.webp',
+    image: '/images/projects/clients/why-new-1.webp',
+    images: [
+      '/images/projects/clients/why-new-1.webp',
+      '/images/projects/clients/why-new-2.webp',
+      '/images/projects/clients/why-new-3.webp'
+    ],
     skills: [
       allSkills.reactjs,
       allSkills.typescript,
@@ -221,7 +246,14 @@ export const clientProjects: ProjectsObjectType = {
   KavachQR: {
     name: 'Kavach QR',
     des: 'Smart vehicle safety ecosystem — QR identity, AI-powered ambulance/towing dispatch, live tracking, and partner analytics (Uber for ambulances).',
-    image: '/images/projects/clients/kavach-qr.webp',
+    image: '/images/projects/clients/kavach-qr-1.webp',
+    images: [
+      '/images/projects/clients/kavach-qr-1.webp',
+      '/images/projects/clients/kavach-qr-2.webp',
+      '/images/projects/clients/kavach-qr-3.webp',
+      '/images/projects/clients/kavach-qr-4.webp',
+      '/images/projects/clients/kavach-qr-5.webp'
+    ],
     skills: [
       allSkills.nextjs,
       allSkills.typescript,
@@ -236,7 +268,12 @@ export const clientProjects: ProjectsObjectType = {
   FoundersBridge: {
     name: 'Founders Bridge',
     des: 'Legal & compliance portal for firms — marketplace services, billing ops, task workflows, and admin tooling for GST, ROC, tax, and startup filings.',
-    image: '/images/projects/clients/founders-bridge.webp',
+    image: '/images/projects/clients/founders-bridge-1.webp',
+    images: [
+      '/images/projects/clients/founders-bridge-1.webp',
+      '/images/projects/clients/founders-bridge-2.webp',
+      '/images/projects/clients/founders-bridge-3.webp'
+    ],
     skills: [
       allSkills.reactjs,
       allSkills.typescript,
