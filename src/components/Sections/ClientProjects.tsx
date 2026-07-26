@@ -76,7 +76,7 @@ export default function ClientProjects() {
         </div>
       </div>
 
-      <div className="mb-8 mt-4 w-[100vw] overflow-hidden md:rotate-[-1deg]">
+      <div className="mb-8 mt-8 w-[100vw] overflow-hidden md:mt-10 md:rotate-[-1deg]">
         {autoScroll ? (
           <Marquee
             pauseOnHover={true}
