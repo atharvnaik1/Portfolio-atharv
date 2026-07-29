@@ -124,9 +124,9 @@ export default function HeroIntro() {
             className="text_heading_size mt-3 text-center font-Monserrat font-bold leading-[1.05]"
             style={{ transform: 'translateZ(44px)' }}
           >
-            <span className="text-primary">Atharv Naik</span>
+            <span className="text-primary">ipaship</span>
             <br />
-            <span className="text-white">Full Stack Developer</span>
+            <span className="text-white">AI-native product engineer</span>
           </motion.h1>
 
           <motion.p

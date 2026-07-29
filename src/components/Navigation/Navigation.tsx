@@ -92,10 +92,12 @@ const Navigation: React.FC = () => {
       </div>
 
       <div className="relative mx-auto flex max-w-7xl items-center justify-between">
-        <Link
-          href="/"
+        <a
+          href="https://lp.ipaship.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group relative inline-flex items-baseline text-xl font-semibold sm:text-2xl"
-          aria-label="Home"
+          aria-label="ipaship"
           style={{ transformStyle: 'preserve-3d' }}
         >
           <motion.span
@@ -104,10 +106,9 @@ const Navigation: React.FC = () => {
             className="inline-block text-primary"
             style={{ transformStyle: 'preserve-3d' }}
           >
-            @Atharv
+            ipaship
           </motion.span>
-          <span className="ml-1.5 text-white">Naik</span>
-        </Link>
+        </a>
 
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
