@@ -29,13 +29,13 @@ export default function ProjectCard({
     <div
       className={`w-[320px] overflow-hidden  rounded-xl border-none bg-background/60 p-3 shadow-lg md:w-[400px] ${classNames}`}
     >
-      <div className="relative">
+      <div className="relative overflow-hidden rounded-lg">
         <Image
           src={projectDetail.image}
           alt={projectDetail.name}
-          className="!max-h-[200px] w-full object-cover"
+          className="!max-h-[220px] w-full object-cover object-top"
           width={390}
-          height={300}
+          height={240}
         />
       </div>
       <div className="mt-2 w-full justify-between">

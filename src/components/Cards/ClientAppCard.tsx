@@ -151,9 +151,16 @@ export default function ClientAppCard({ projectDetail }: ClientAppCardProps) {
         ) : null}
 
         <div className="px-1 pb-1 pt-3">
-          <h3 className="text-lg font-semibold text-white">
-            {projectDetail.name}
-          </h3>
+          <div className="flex items-center gap-2">
+            <h3 className="text-lg font-semibold text-white">
+              {projectDetail.name}
+            </h3>
+            {projectDetail.featured ? (
+              <span className="rounded-full border border-amber-400/40 bg-amber-400/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
+                Founder
+              </span>
+            ) : null}
+          </div>
           <p className="mt-2 line-clamp-3 text-sm text-gray-400">
             {projectDetail.des}
           </p>
