@@ -29,7 +29,7 @@ export type ProjectsObjectType = {
 export const personalProjects: ProjectsObjectType = {
   NFTMARKET: {
     name: ' ERC-1155 NFT Market',
-    des: 'NFT Market is a platform where users can create nfts, buy, sell, and trade NFTs. The platform has a user-friendly interface that makes it easy to use for everyone.',
+    des: 'Polished ERC-1155 marketplace to mint, list, and trade multi-edition NFTs — wallet connect, live listings, quantity-aware buys, and a modern dark Web3 UI.',
     demo: 'https://nft-marketplace-seven-lovat.vercel.app/',
     github: 'https://github.com/atharvnaik1/NFT-MARKETPLACE',
     image: '/images/projects/nft-card.webp',
@@ -45,7 +45,7 @@ export const personalProjects: ProjectsObjectType = {
 
   JIRAClone: {
     name: 'JIRA Clone',
-    des: 'Designed a responsive and intuitive UI to track progress, manage workflows, and assign tasks dynamically in realtime.',
+    des: 'Refined Kanban workspace inspired by Jira — backlog to done boards, priority badges, checklists, due dates, and realtime-style task movement in a clean SaaS UI.',
     demo: ' https://jirax-clonex.vercel.app',
     github: 'https://github.com/atharvnaik1',
     image: '/images/projects/jira-card.webp',
