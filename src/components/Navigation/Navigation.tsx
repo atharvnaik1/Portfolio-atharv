@@ -7,15 +7,15 @@ import { FaAndroid, FaApple, FaAppStoreIos, FaGooglePlay, FaMobileAlt } from 're
 import { SiReact } from 'react-icons/si';
 
 const navItems = [
-  { title: 'Hello', href: '#title' },
-  { title: 'About', href: '#about-me' },
-  { title: 'Skills', href: '#skills' },
-  { title: 'Clients', href: '#successful-clients' },
-  { title: 'Featured', href: '#intro-projects' },
-  { title: 'Personal', href: '#personal-projects' },
-  { title: 'AI & Web3', href: '#AI-and-web3-projects' },
-  { title: 'Open Source', href: '#Opensource-projects' },
-  { title: 'Contact', href: '#contact-me' }
+  { title: 'Hello', href: '/#title' },
+  { title: 'About', href: '/about' },
+  { title: 'Skills', href: '/#skills' },
+  { title: 'Clients', href: '/#successful-clients' },
+  { title: 'Featured', href: '/#intro-projects' },
+  { title: 'Personal', href: '/#personal-projects' },
+  { title: 'AI & Web3', href: '/#AI-and-web3-projects' },
+  { title: 'Open Source', href: '/#Opensource-projects' },
+  { title: 'Contact', href: '/#contact-me' }
 ];
 
 const mobilePlatformIcons = [
