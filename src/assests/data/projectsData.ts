@@ -17,6 +17,8 @@ export type ProjectDataType = {
   images?: string[];
   skills: OneSkillObjectType[];
   type: ProjectType;
+  industry?: string;
+  client?: string;
   appStore?: string;
   playStore?: string;
   featured?: boolean;
@@ -173,6 +175,8 @@ export const clientProjects: ProjectsObjectType = {
   Dozenmalls: {
     name: 'Dozenmalls (Founder)',
     des: 'Founded quick-commerce iOS app for groceries & essentials — 500+ customers during COVID, doorstep delivery, realtime inventory, and high-frequency reorder flows.',
+    industry: 'Quick Commerce',
+    client: 'IPASHIP (Founder-led)',
     image: '/images/projects/clients/dozenmalls-1.webp',
     images: [
       '/images/projects/clients/dozenmalls-1.webp',
@@ -191,6 +195,8 @@ export const clientProjects: ProjectsObjectType = {
   OrgOrbit: {
     name: 'OrgOrbit',
     des: 'AI-native community super-app to mobilize orgs — custom AI modules & insights, fundraising, multi-format posts, and engagement analytics for leaders.',
+    industry: 'Community & AI',
+    client: 'Purpus Technologies',
     image: '/images/projects/clients/orgorbit-1.webp',
     images: [
       '/images/projects/clients/orgorbit-1.webp',
@@ -213,6 +219,8 @@ export const clientProjects: ProjectsObjectType = {
   JapaRuchi: {
     name: 'MahaMantra Japa Ruchi',
     des: 'AI-assisted spiritual practice app — chant detection, progress analytics, leaderboards, and community engagement built for daily devotion.',
+    industry: 'Spiritual & Wellness',
+    client: 'OrgOrbit',
     image: '/images/projects/clients/japa-ruchi-1.webp',
     images: [
       '/images/projects/clients/japa-ruchi-1.webp',
@@ -235,6 +243,8 @@ export const clientProjects: ProjectsObjectType = {
   BetweenBreaks: {
     name: 'BetweenBreaks',
     des: 'Campus socializing & career network — instant messaging, AI resume editing with role-based suggestions, and Handshake-style connections.',
+    industry: 'Education & Social',
+    client: 'BetweenBreaks',
     image: '/images/projects/clients/between-breaks-1.webp',
     images: [
       '/images/projects/clients/between-breaks-1.webp',
@@ -252,6 +262,8 @@ export const clientProjects: ProjectsObjectType = {
   WhyNew: {
     name: 'Why New',
     des: '2nd-hand mobile marketplace — verified listings, doorstep pickup flows, instant payments, and a high-conversion sell/exchange experience.',
+    industry: 'Mobile Marketplace',
+    client: 'Why New',
     image: '/images/projects/clients/why-new-1.webp',
     images: [
       '/images/projects/clients/why-new-1.webp',
@@ -270,6 +282,8 @@ export const clientProjects: ProjectsObjectType = {
   KavachQR: {
     name: 'Kavach QR',
     des: 'Smart vehicle safety ecosystem — QR identity, AI-powered ambulance/towing dispatch, live tracking, and partner analytics (Uber for ambulances).',
+    industry: 'Safety & Logistics',
+    client: 'Kavach Solutions',
     image: '/images/projects/clients/kavach-qr-1.webp',
     images: [
       '/images/projects/clients/kavach-qr-1.webp',
@@ -292,6 +306,8 @@ export const clientProjects: ProjectsObjectType = {
   FoundersBridge: {
     name: 'Founders Bridge',
     des: 'Legal & compliance portal for firms — marketplace services, billing ops, task workflows, and admin tooling for GST, ROC, tax, and startup filings.',
+    industry: 'Legal & Compliance',
+    client: 'Founders Bridge',
     image: '/images/projects/clients/founders-bridge-1.webp',
     images: [
       '/images/projects/clients/founders-bridge-1.webp',
