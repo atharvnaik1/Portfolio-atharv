@@ -1,16 +1,21 @@
 'use client';
 
+import Link from 'next/link';
 import React, { useMemo, useState } from 'react';
-import { Button, Image, Link } from '@nextui-org/react';
+import { Button, Image, Link as NextLink } from '@nextui-org/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { ProjectDataType } from '@/assests/data/projectsData';
 
 type ClientAppCardProps = {
   projectDetail: ProjectDataType;
+  slug: string;
 };
 
-export default function ClientAppCard({ projectDetail }: ClientAppCardProps) {
+export default function ClientAppCard({
+  projectDetail,
+  slug
+}: ClientAppCardProps) {
   const screens = useMemo(() => {
     const list = projectDetail.images?.filter(Boolean) ?? [];
     if (list.length) return list;
@@ -152,9 +157,12 @@ export default function ClientAppCard({ projectDetail }: ClientAppCardProps) {
 
         <div className="px-1 pb-1 pt-3">
           <div className="flex items-center gap-2">
-            <h3 className="text-lg font-semibold text-white">
+            <Link
+              href={`/apps/${slug}`}
+              className="text-lg font-semibold text-white transition hover:text-primary"
+            >
               {projectDetail.name}
-            </h3>
+            </Link>
             {projectDetail.featured ? (
               <span className="rounded-full border border-amber-400/40 bg-amber-400/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
                 Founder
@@ -166,8 +174,14 @@ export default function ClientAppCard({ projectDetail }: ClientAppCardProps) {
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2">
+            <Link
+              href={`/apps/${slug}`}
+              className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10"
+            >
+              View Details
+            </Link>
             {projectDetail.appStore ? (
-              <Link href={projectDetail.appStore} target="_blank">
+              <NextLink href={projectDetail.appStore} target="_blank">
                 <Button
                   size="sm"
                   color="primary"
@@ -177,10 +191,10 @@ export default function ClientAppCard({ projectDetail }: ClientAppCardProps) {
                 >
                   App Store
                 </Button>
-              </Link>
+              </NextLink>
             ) : null}
             {projectDetail.playStore ? (
-              <Link href={projectDetail.playStore} target="_blank">
+              <NextLink href={projectDetail.playStore} target="_blank">
                 <Button
                   size="sm"
                   color="success"
@@ -190,7 +204,7 @@ export default function ClientAppCard({ projectDetail }: ClientAppCardProps) {
                 >
                   Play Store
                 </Button>
-              </Link>
+              </NextLink>
             ) : null}
           </div>
         </div>

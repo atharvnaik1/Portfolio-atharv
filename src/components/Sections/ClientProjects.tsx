@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaPause, FaPlay, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { clientProjects } from '@/assests/data/projectsData';
+import { projectKeyToSlug } from '@/lib/projectRoutes';
 import ClientAppCard from '../Cards/ClientAppCard';
 
 const projectKeys = Object.keys(clientProjects);
@@ -89,7 +90,10 @@ export default function ClientProjects() {
               const item = clientProjects[key as keyof typeof clientProjects];
               return (
                 <div className="mx-4 py-6" key={key}>
-                  <ClientAppCard projectDetail={item} />
+                  <ClientAppCard
+                    projectDetail={item}
+                    slug={projectKeyToSlug(key)}
+                  />
                 </div>
               );
             })}
@@ -108,7 +112,10 @@ export default function ClientProjects() {
               const item = clientProjects[key as keyof typeof clientProjects];
               return (
                 <div className="snap-center shrink-0" key={key}>
-                  <ClientAppCard projectDetail={item} />
+                  <ClientAppCard
+                    projectDetail={item}
+                    slug={projectKeyToSlug(key)}
+                  />
                 </div>
               );
             })}

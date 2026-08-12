@@ -1,4 +1,5 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { appProjectEntries } from '@/lib/projectRoutes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -67,7 +68,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
 
-    // Contact is important → weekly
+    // App detail pages
+    ...appProjectEntries.map((entry) => ({
+      url: `https://async-atharv.com/apps/${entry.slug}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85
+    })),
     {
       url: 'https://async-atharv.com/#contact-me',
       lastModified,

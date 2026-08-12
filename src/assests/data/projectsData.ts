@@ -7,6 +7,12 @@ export enum ProjectType {
   Client = 'Client'
 }
 
+export type ProjectTestimonial = {
+  quote: string;
+  author: string;
+  role: string;
+};
+
 export type ProjectDataType = {
   name: string;
   des: string;
@@ -17,6 +23,9 @@ export type ProjectDataType = {
   images?: string[];
   skills: OneSkillObjectType[];
   type: ProjectType;
+  industry?: string;
+  client?: string;
+  testimonials?: ProjectTestimonial[];
   appStore?: string;
   playStore?: string;
   featured?: boolean;
@@ -173,6 +182,8 @@ export const clientProjects: ProjectsObjectType = {
   Dozenmalls: {
     name: 'Dozenmalls (Founder)',
     des: 'Founded quick-commerce iOS app for groceries & essentials — 500+ customers during COVID, doorstep delivery, realtime inventory, and high-frequency reorder flows.',
+    industry: 'Quick Commerce',
+    client: 'IPASHIP (Founder-led)',
     image: '/images/projects/clients/dozenmalls-1.webp',
     images: [
       '/images/projects/clients/dozenmalls-1.webp',
@@ -186,11 +197,21 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.sass
     ],
     type: ProjectType.Client,
-    featured: true
+    featured: true,
+    testimonials: [
+      {
+        quote:
+          'As a founder building during COVID, I needed someone who could move like a CTO on steroids — not just code, but own the entire product. He shipped our quick-commerce iOS app fast enough to serve 500+ customers when it mattered most, with delivery flows that actually worked under real pressure.',
+        author: 'Atharv Naik',
+        role: 'Founder · Dozenmalls · IPASHIP'
+      }
+    ]
   },
   OrgOrbit: {
     name: 'OrgOrbit',
     des: 'AI-native community super-app to mobilize orgs — custom AI modules & insights, fundraising, multi-format posts, and engagement analytics for leaders.',
+    industry: 'Community & AI',
+    client: 'Purpus Technologies',
     image: '/images/projects/clients/orgorbit-1.webp',
     images: [
       '/images/projects/clients/orgorbit-1.webp',
@@ -208,11 +229,21 @@ export const clientProjects: ProjectsObjectType = {
     type: ProjectType.Client,
     appStore: 'https://apps.apple.com/in/app/orgorbit/id6479863473',
     playStore:
-      'https://play.google.com/store/apps/details?id=com.purpus&pcampaignid=web_share'
+      'https://play.google.com/store/apps/details?id=com.purpus&pcampaignid=web_share',
+    testimonials: [
+      {
+        quote:
+          'Atharv is like a CTO on steroids — he ships with the speed of a founder and the depth of a seasoned engineering leader. He transformed our product with experience you can feel in every release, and we now see 40% higher user retention.',
+        author: 'Founder',
+        role: 'Purpus Technologies · OrgOrbit'
+      }
+    ]
   },
   JapaRuchi: {
     name: 'MahaMantra Japa Ruchi',
     des: 'AI-assisted spiritual practice app — chant detection, progress analytics, leaderboards, and community engagement built for daily devotion.',
+    industry: 'Spiritual & Wellness',
+    client: 'OrgOrbit',
     image: '/images/projects/clients/japa-ruchi-1.webp',
     images: [
       '/images/projects/clients/japa-ruchi-1.webp',
@@ -230,11 +261,21 @@ export const clientProjects: ProjectsObjectType = {
     appStore:
       'https://apps.apple.com/in/app/mahamantra-japa-ruchi/id6754645747',
     playStore:
-      'https://play.google.com/store/apps/details?id=com.orgorbit.japa&pcampaignid=web_share'
+      'https://play.google.com/store/apps/details?id=com.orgorbit.japa&pcampaignid=web_share',
+    testimonials: [
+      {
+        quote:
+          'He designed a product strategy that gave my spiritual journey a whole new way to earn passive income. The app still feels devotional at its core — but now it also sustains the mission with revenue paths I never imagined were possible.',
+        author: 'Founder',
+        role: 'MahaMantra Japa Ruchi'
+      }
+    ]
   },
   BetweenBreaks: {
     name: 'BetweenBreaks',
     des: 'Campus socializing & career network — instant messaging, AI resume editing with role-based suggestions, and Handshake-style connections.',
+    industry: 'Education & Social',
+    client: 'BetweenBreaks',
     image: '/images/projects/clients/between-breaks-1.webp',
     images: [
       '/images/projects/clients/between-breaks-1.webp',
@@ -247,11 +288,21 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.nodejs,
       allSkills.tailwindcss
     ],
-    type: ProjectType.Client
+    type: ProjectType.Client,
+    testimonials: [
+      {
+        quote:
+          'He transformed our campus product with the kind of experience you only get from someone who has shipped real mobile apps before. Engagement went up across messaging and career flows — we are now seeing roughly 40% better retention among active students on the platform.',
+        author: 'Founder',
+        role: 'BetweenBreaks'
+      }
+    ]
   },
   WhyNew: {
     name: 'Why New',
     des: '2nd-hand mobile marketplace — verified listings, doorstep pickup flows, instant payments, and a high-conversion sell/exchange experience.',
+    industry: 'Mobile Marketplace',
+    client: 'Why New',
     image: '/images/projects/clients/why-new-1.webp',
     images: [
       '/images/projects/clients/why-new-1.webp',
@@ -265,11 +316,21 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.tailwindcss
     ],
     type: ProjectType.Client,
-    appStore: 'https://apps.apple.com/in/app/why-new/id6760283075'
+    appStore: 'https://apps.apple.com/in/app/why-new/id6760283075',
+    testimonials: [
+      {
+        quote:
+          'I had doubts about whether a marketplace app could feel premium and convert on mobile. He broke those myths completely. His expertise in mobile product design showed up in our listing flows, pickup experience, and payments — and the results finally matched the vision.',
+        author: 'Founder',
+        role: 'Why New'
+      }
+    ]
   },
   KavachQR: {
     name: 'Kavach QR',
     des: 'Smart vehicle safety ecosystem — QR identity, AI-powered ambulance/towing dispatch, live tracking, and partner analytics (Uber for ambulances).',
+    industry: 'Safety & Logistics',
+    client: 'Kavach Solutions',
     image: '/images/projects/clients/kavach-qr-1.webp',
     images: [
       '/images/projects/clients/kavach-qr-1.webp',
@@ -287,11 +348,21 @@ export const clientProjects: ProjectsObjectType = {
     type: ProjectType.Client,
     appStore: 'https://apps.apple.com/in/app/kavach-qr/id6479373315',
     playStore:
-      'https://play.google.com/store/apps/details?id=com.kavach.qr&pcampaignid=web_share'
+      'https://play.google.com/store/apps/details?id=com.kavach.qr&pcampaignid=web_share',
+    testimonials: [
+      {
+        quote:
+          'He broke every myth I had about building a serious mobile product on a startup budget. I did not believe the pace or the polish was possible until users started showing up and staying. His mobile expertise gave us real traction — and directly helped us close our seed funding round.',
+        author: 'Founder',
+        role: 'Kavach Solutions · Kavach QR'
+      }
+    ]
   },
   FoundersBridge: {
     name: 'Founders Bridge',
     des: 'Legal & compliance portal for firms — marketplace services, billing ops, task workflows, and admin tooling for GST, ROC, tax, and startup filings.',
+    industry: 'Legal & Compliance',
+    client: 'Founders Bridge',
     image: '/images/projects/clients/founders-bridge-1.webp',
     images: [
       '/images/projects/clients/founders-bridge-1.webp',
@@ -304,7 +375,15 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.nodejs,
       allSkills.tailwindcss
     ],
-    type: ProjectType.Client
+    type: ProjectType.Client,
+    testimonials: [
+      {
+        quote:
+          'We needed more than a compliance portal — we needed a product founders would trust with their company filings. He redesigned our workflows, billing ops, and marketplace experience with sharp product thinking. Our startup clients feel the difference, and it has become a real growth lever for the firm.',
+        author: 'Founder',
+        role: 'Founders Bridge'
+      }
+    ]
   }
 };
 
