@@ -197,7 +197,15 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.sass
     ],
     type: ProjectType.Client,
-    featured: true
+    featured: true,
+    testimonials: [
+      {
+        quote:
+          'As a founder building during COVID, I needed someone who could move like a CTO on steroids — not just code, but own the entire product. He shipped our quick-commerce iOS app fast enough to serve 500+ customers when it mattered most, with delivery flows that actually worked under real pressure.',
+        author: 'Atharv Naik',
+        role: 'Founder · Dozenmalls · IPASHIP'
+      }
+    ]
   },
   OrgOrbit: {
     name: 'OrgOrbit',
@@ -280,7 +288,15 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.nodejs,
       allSkills.tailwindcss
     ],
-    type: ProjectType.Client
+    type: ProjectType.Client,
+    testimonials: [
+      {
+        quote:
+          'He transformed our campus product with the kind of experience you only get from someone who has shipped real mobile apps before. Engagement went up across messaging and career flows — we are now seeing roughly 40% better retention among active students on the platform.',
+        author: 'Founder',
+        role: 'BetweenBreaks'
+      }
+    ]
   },
   WhyNew: {
     name: 'Why New',
@@ -300,7 +316,15 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.tailwindcss
     ],
     type: ProjectType.Client,
-    appStore: 'https://apps.apple.com/in/app/why-new/id6760283075'
+    appStore: 'https://apps.apple.com/in/app/why-new/id6760283075',
+    testimonials: [
+      {
+        quote:
+          'I had doubts about whether a marketplace app could feel premium and convert on mobile. He broke those myths completely. His expertise in mobile product design showed up in our listing flows, pickup experience, and payments — and the results finally matched the vision.',
+        author: 'Founder',
+        role: 'Why New'
+      }
+    ]
   },
   KavachQR: {
     name: 'Kavach QR',
@@ -351,7 +375,15 @@ export const clientProjects: ProjectsObjectType = {
       allSkills.nodejs,
       allSkills.tailwindcss
     ],
-    type: ProjectType.Client
+    type: ProjectType.Client,
+    testimonials: [
+      {
+        quote:
+          'We needed more than a compliance portal — we needed a product founders would trust with their company filings. He redesigned our workflows, billing ops, and marketplace experience with sharp product thinking. Our startup clients feel the difference, and it has become a real growth lever for the firm.',
+        author: 'Founder',
+        role: 'Founders Bridge'
+      }
+    ]
   }
 };
 
