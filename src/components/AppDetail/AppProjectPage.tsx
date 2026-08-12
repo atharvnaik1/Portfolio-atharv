@@ -176,6 +176,46 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
           </div>
         </div>
 
+        {project.testimonials && project.testimonials.length > 0 ? (
+          <div className="mt-14">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+              Founder Words
+            </p>
+            <h2 className="mt-2 font-Monserrat text-2xl font-semibold text-white md:text-3xl">
+              What clients say
+            </h2>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {project.testimonials.map((testimonial, index) => (
+                <blockquote
+                  key={`${slug}-testimonial-${index}`}
+                  className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-[#1a1230]/80 to-[#0d0a18]/90 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.3)] md:p-8"
+                >
+                  <span
+                    className="font-Monserrat text-5xl leading-none text-primary/40"
+                    aria-hidden
+                  >
+                    &ldquo;
+                  </span>
+                  <p className="mt-2 text-base leading-relaxed text-gray-200 md:text-lg">
+                    {testimonial.quote}
+                  </p>
+                  <footer className="mt-6 border-t border-white/10 pt-4">
+                    <cite className="not-italic">
+                      <p className="font-semibold text-white">
+                        {testimonial.author}
+                      </p>
+                      <p className="mt-1 text-sm text-gray-400">
+                        {testimonial.role}
+                      </p>
+                    </cite>
+                  </footer>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="https://lp.ipaship.com/apply"

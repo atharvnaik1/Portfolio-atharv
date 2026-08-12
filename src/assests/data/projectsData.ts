@@ -7,6 +7,12 @@ export enum ProjectType {
   Client = 'Client'
 }
 
+export type ProjectTestimonial = {
+  quote: string;
+  author: string;
+  role: string;
+};
+
 export type ProjectDataType = {
   name: string;
   des: string;
@@ -19,6 +25,7 @@ export type ProjectDataType = {
   type: ProjectType;
   industry?: string;
   client?: string;
+  testimonials?: ProjectTestimonial[];
   appStore?: string;
   playStore?: string;
   featured?: boolean;
@@ -214,7 +221,15 @@ export const clientProjects: ProjectsObjectType = {
     type: ProjectType.Client,
     appStore: 'https://apps.apple.com/in/app/orgorbit/id6479863473',
     playStore:
-      'https://play.google.com/store/apps/details?id=com.purpus&pcampaignid=web_share'
+      'https://play.google.com/store/apps/details?id=com.purpus&pcampaignid=web_share',
+    testimonials: [
+      {
+        quote:
+          'Atharv is like a CTO on steroids — he ships with the speed of a founder and the depth of a seasoned engineering leader. He transformed our product with experience you can feel in every release, and we now see 40% higher user retention.',
+        author: 'Founder',
+        role: 'Purpus Technologies · OrgOrbit'
+      }
+    ]
   },
   JapaRuchi: {
     name: 'MahaMantra Japa Ruchi',
@@ -238,7 +253,15 @@ export const clientProjects: ProjectsObjectType = {
     appStore:
       'https://apps.apple.com/in/app/mahamantra-japa-ruchi/id6754645747',
     playStore:
-      'https://play.google.com/store/apps/details?id=com.orgorbit.japa&pcampaignid=web_share'
+      'https://play.google.com/store/apps/details?id=com.orgorbit.japa&pcampaignid=web_share',
+    testimonials: [
+      {
+        quote:
+          'He designed a product strategy that gave my spiritual journey a whole new way to earn passive income. The app still feels devotional at its core — but now it also sustains the mission with revenue paths I never imagined were possible.',
+        author: 'Founder',
+        role: 'MahaMantra Japa Ruchi'
+      }
+    ]
   },
   BetweenBreaks: {
     name: 'BetweenBreaks',
@@ -301,7 +324,15 @@ export const clientProjects: ProjectsObjectType = {
     type: ProjectType.Client,
     appStore: 'https://apps.apple.com/in/app/kavach-qr/id6479373315',
     playStore:
-      'https://play.google.com/store/apps/details?id=com.kavach.qr&pcampaignid=web_share'
+      'https://play.google.com/store/apps/details?id=com.kavach.qr&pcampaignid=web_share',
+    testimonials: [
+      {
+        quote:
+          'He broke every myth I had about building a serious mobile product on a startup budget. I did not believe the pace or the polish was possible until users started showing up and staying. His mobile expertise gave us real traction — and directly helped us close our seed funding round.',
+        author: 'Founder',
+        role: 'Kavach Solutions · Kavach QR'
+      }
+    ]
   },
   FoundersBridge: {
     name: 'Founders Bridge',
