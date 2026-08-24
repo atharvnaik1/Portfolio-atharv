@@ -109,8 +109,6 @@ export default function ClientAppCard({
                             alt={`${projectDetail.name} screen ${
                               screenIndex + 1
                             }`}
-                            width={560}
-                            height={1180}
                             className="h-full w-full object-cover"
                             classNames={{
                               wrapper: 'h-full w-full !max-w-none',
@@ -122,8 +120,6 @@ export default function ClientAppCard({
                         <Image
                           src={src}
                           alt=""
-                          width={560}
-                          height={1180}
                           className="h-full w-full object-cover"
                           classNames={{
                             wrapper: 'h-full w-full !max-w-none',

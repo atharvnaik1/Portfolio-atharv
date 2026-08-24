@@ -169,8 +169,6 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
                       <Image
                         src={src}
                         alt={`${project.name} screen ${index + 1}`}
-                        width={560}
-                        height={1180}
                         className="aspect-[9/19.5] h-auto w-full object-cover"
                       />
                     </div>

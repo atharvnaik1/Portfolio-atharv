@@ -7,6 +7,10 @@ type Props = {
   settings?: object;
 };
 
+// react-slick clones custom arrows and injects props (data-role, onClick, ...),
+// which React.Fragment cannot receive — render nothing via a component instead.
+const HiddenArrow = () => null;
+
 export default function CarouselContainer({ children, settings }: Props) {
   const config = {
     dots: true,
@@ -16,13 +20,13 @@ export default function CarouselContainer({ children, settings }: Props) {
     autoplay: true,
     // autoplaySpeed: 2000,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    // centerMode forces slidesToScroll to 1 inside react-slick
     swipeToSlide: true,
     centerMode: true,
     centerPadding: '40px',
     // cssEase: "linear",
-    nextArrow: <></>,
-    prevArrow: <></>,
+    nextArrow: <HiddenArrow />,
+    prevArrow: <HiddenArrow />,
     responsive: [
       {
         breakpoint: 1444,
