@@ -110,7 +110,7 @@ export default function HeroIntro() {
             transformStyle: 'preserve-3d',
             backgroundImage: glowBackground
           }}
-          className="hero-3d-card bg-[#120c22]/55 rounded-3xl border border-white/10 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8 md:p-10"
+          className="hero-3d-card rounded-3xl border border-white/10 bg-[#120c22]/55 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8 md:p-10"
         >
           <motion.p
             initial={{ opacity: 0, y: 12 }}

@@ -52,7 +52,7 @@ export default function ClientAppCard({
           style={{ perspective: 1400 }}
           aria-label={`View next screen of ${projectDetail.name}`}
         >
-          <div className="text-white/55 pointer-events-none absolute inset-x-6 top-2 z-20 flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.16em]">
+          <div className="pointer-events-none absolute inset-x-6 top-2 z-20 flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.16em] text-white/55">
             <span>Tap to flip</span>
             <span>
               {active + 1}/{total}
@@ -166,7 +166,7 @@ export default function ClientAppCard({
               {projectDetail.name}
             </Link>
             {projectDetail.featured ? (
-              <span className="bg-amber-400/15 rounded-full border border-amber-400/40 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
+              <span className="rounded-full border border-amber-400/40 bg-amber-400/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
                 Founder
               </span>
             ) : null}
@@ -178,7 +178,7 @@ export default function ClientAppCard({
           <div className="mt-4 flex flex-wrap gap-2">
             <Link
               href={`/apps/${slug}`}
-              className="border-white/15 inline-flex items-center rounded-lg border bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10"
             >
               View Details
             </Link>

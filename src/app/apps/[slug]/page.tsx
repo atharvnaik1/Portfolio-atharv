@@ -8,15 +8,18 @@ import {
 } from '@/lib/projectRoutes';
 
 type PageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
   return appProjectEntries.map((entry) => ({ slug: entry.slug }));
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const entry = getAppProjectBySlug(params.slug);
+export async function generateMetadata({
+  params
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = getAppProjectBySlug(slug);
   if (!entry) {
     return { title: 'App Not Found' };
   }
@@ -38,8 +41,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function AppDetailRoute({ params }: PageProps) {
-  const entry = getAppProjectBySlug(params.slug);
+export default async function AppDetailRoute({ params }: PageProps) {
+  const { slug } = await params;
+  const entry = getAppProjectBySlug(slug);
   if (!entry) notFound();
 
   return <AppProjectPage entry={entry} />;

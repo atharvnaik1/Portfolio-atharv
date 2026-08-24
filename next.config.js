@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['pixner.net'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -10,7 +9,6 @@ const nextConfig = {
       }
     ]
   },
-  swcMinify: true,
   async headers() {
     return [
       {

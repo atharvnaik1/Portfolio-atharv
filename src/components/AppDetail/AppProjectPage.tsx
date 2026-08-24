@@ -37,7 +37,7 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
           <div>
             <div className="flex flex-wrap items-center gap-2">
               {project.featured ? (
-                <span className="bg-amber-400/15 rounded-full border border-amber-400/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-amber-300">
+                <span className="rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-amber-300">
                   Founder
                 </span>
               ) : null}

@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
@@ -58,8 +57,8 @@ const Navigation: React.FC = () => {
       transition={{ duration: 0.55, ease: 'easeOut' }}
       className={`sticky top-0 z-[100] w-full px-3 py-2.5 transition-all duration-300 sm:px-5 sm:py-3 ${
         scrolled
-          ? 'bg-[#0b0818]/85 border-b border-white/10 shadow-[0_12px_40px_rgba(0,0,0,0.4)] backdrop-blur-xl'
-          : 'bg-[#0b0818]/35 border-b border-transparent backdrop-blur-md'
+          ? 'border-b border-white/10 bg-[#0b0818]/85 shadow-[0_12px_40px_rgba(0,0,0,0.4)] backdrop-blur-xl'
+          : 'border-b border-transparent bg-[#0b0818]/35 backdrop-blur-md'
       }`}
       role="navigation"
       aria-label="Primary navigation"
@@ -150,7 +149,7 @@ const Navigation: React.FC = () => {
             aria-label={open ? 'Close menu' : 'Open menu'}
             whileTap={{ scale: 0.92, rotateY: 20 }}
             animate={open ? { rotate: 90 } : { rotate: 0 }}
-            className="border-white/15 rounded-lg border bg-white/10 p-2 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="rounded-lg border border-white/15 bg-white/10 p-2 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
             style={{ transformStyle: 'preserve-3d' }}
           >
             <svg
@@ -200,7 +199,7 @@ const Navigation: React.FC = () => {
                 return (
                   <motion.div
                     key={`drawer-${item.label}`}
-                    className={`border-white/15 flex h-9 w-9 items-center justify-center rounded-xl border bg-white/5 text-base ${item.color}`}
+                    className={`flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-base ${item.color}`}
                     style={{ transformStyle: 'preserve-3d' }}
                     initial={{ opacity: 0, z: -40, rotateY: -40 }}
                     animate={{
