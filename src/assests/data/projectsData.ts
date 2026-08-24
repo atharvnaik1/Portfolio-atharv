@@ -129,7 +129,7 @@ export const personalProjects: ProjectsObjectType = {
 
   portfolio: {
     name: "Atharv's Portfolio",
-    des: 'This is my personal portfolio website. It showcases my skills, projects, and experiences as a Full Stack Developer.',
+    des: 'This is my personal portfolio website. It showcases my skills, projects, and experiences as a Mobile App Developer & GTM Expert.',
     demo: 'https://atharvnaiks.vercel.app/',
     github: 'https://github.com/atharvnaik1/Portfolio-atharv',
     image: '/images/projects/portfolio-card.webp',

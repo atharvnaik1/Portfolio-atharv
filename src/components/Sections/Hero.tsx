@@ -72,7 +72,6 @@
 'use client';
 
 import React from 'react';
-import Head from 'next/head';
 import { Chip } from '@nextui-org/react';
 import useSkills from '@/hooks/useSkills';
 import Marquee from 'react-fast-marquee';
@@ -88,13 +87,20 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <Head>
-        <title>Atharv Naik — Full Stack Developer</title>
-        <meta
-          name="description"
-          content="Atharv Naik — Full Stack Developer building scalable backends with Kafka & ClickHouse and iOS apps. View projects, open-source work and contact details."
-        />
-      </Head>
+      {/* Schema for Hero — visible structured name for crawlers */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPageElement',
+            name: 'Atharv Naik — Mobile App Developer & GTM Expert',
+            description:
+              'Atharv Naik (async-atharv) is a Mobile App Developer & Go-To-Market Expert with 7+ years shipping production iOS & Android apps for startups and MNCs. Founder of IPASHIP LLC.',
+            mainEntity: { '@id': 'https://async-atharv.com/#person' }
+          })
+        }}
+      />
 
       <main>
         <HeroIntro />
@@ -110,12 +116,12 @@ const Hero: React.FC = () => {
           <p className="mt-4 text-base leading-relaxed text-gray-300 md:text-lg">
             With{' '}
             <span className="font-semibold text-white">7 years of experience</span>{' '}
-            building production apps for{' '}
+            shipping production mobile apps for{' '}
             <span className="font-semibold text-white">
               Google ecosystems, MNCs, and high-growth startups
             </span>
-            , I help founders turn product ideas into revenue engines — shipping
-            apps that have driven{' '}
+            , I help founders turn app ideas into revenue engines — launching
+            iOS & Android apps that have driven{' '}
             <span className="font-semibold text-primary">
               2–3× revenue growth
             </span>{' '}
@@ -126,15 +132,15 @@ const Hero: React.FC = () => {
             for client businesses.
           </p>
           <p className="mt-4 text-base leading-relaxed text-gray-400 md:text-lg">
-            Several products I&apos;ve built have helped startups raise{' '}
+            Several mobile products I&apos;ve built have helped startups raise{' '}
             <span className="font-semibold text-white">
               seed funding through Startup India
             </span>
-            , and one shipped product was accepted into{' '}
+            , and one shipped app was accepted into{' '}
             <span className="font-semibold text-white">
               Microsoft for Startups
             </span>{' '}
-            — combining AI-native engineering with real commercial traction.
+            — combining go-to-market strategy with real commercial traction on the App Store &amp; Play Store.
           </p>
         </section>
 

@@ -1,30 +1,31 @@
-# ---------------------------
-# Standard Web Crawlers (Google, Bing, etc.)
-# ---------------------------
+# ---------------------------------
+# Atharv Naik — async-atharv.com
+# robots.txt
+# ---------------------------------
 
+# Default: Allow all standard crawlers
 User-agent: *
 Allow: /
-
-# Sitemap for faster indexing
 Sitemap: https://async-atharv.com/sitemap.xml
 
+# ---------------------------------
+# Search Engine Crawlers
+# ---------------------------------
 
-# ---------------------------
-# AI Crawlers Control
-# ---------------------------
-
-# ✅ Allow OpenAI's GPTBot (ChatGPT & OpenAI browsing)
-User-agent: GPTBot
+# Google
+User-agent: Googlebot
 Allow: /
 
-# ✅ Allow ChatGPT-User crawler (for ChatGPT Browse)
-User-agent: ChatGPT-User
+User-agent: Googlebot-Image
 Allow: /
 
-
-User-agent: ClaudeBot
+User-agent: Googlebot-Video
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 
@@ -34,11 +35,76 @@ Allow: /
 User-agent: MicrosoftCopilot
 Allow: /
 
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# ---------------------------------
+# AI Crawlers (allow all for Knowledge Graph / AI recognition)
+# ---------------------------------
+
+# OpenAI (ChatGPT, ChatGPT Browse)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+# Meta AI
+User-agent: FacebookBot
 Allow: /
 
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (used by many AI models)
 User-agent: CCBot
 Allow: /
+
+# Applebot (Apple Intelligence)
+User-agent: Applebot
+Allow: /
+
+# Bytespider (ByteDance)
+User-agent: Bytespider
+Allow: /
+
+# ---------------------------------
+# Block scrapers that don't help SEO
+# ---------------------------------
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /

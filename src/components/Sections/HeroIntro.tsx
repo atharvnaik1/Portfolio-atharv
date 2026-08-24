@@ -12,9 +12,9 @@ import useSocialMediaLinks from '@/hooks/useSocialMediaLinks';
 
 const floatingTokens = [
   { label: 'iOS Apps', x: '8%', y: '18%', delay: 0 },
-  { label: 'AI Native', x: '78%', y: '14%', delay: 0.2 },
-  { label: 'Kafka', x: '12%', y: '68%', delay: 0.35 },
-  { label: 'Startups', x: '74%', y: '66%', delay: 0.45 }
+  { label: 'GTM Strategy', x: '78%', y: '14%', delay: 0.2 },
+  { label: 'Android', x: '12%', y: '68%', delay: 0.35 },
+  { label: 'App Launch', x: '74%', y: '66%', delay: 0.45 }
 ];
 
 export default function HeroIntro() {
@@ -114,7 +114,7 @@ export default function HeroIntro() {
             className="text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-xs"
             style={{ transform: 'translateZ(28px)' }}
           >
-            AI-Native Product Engineer
+            Mobile App Developer & GTM Expert
           </motion.p>
 
           <motion.h1
@@ -126,7 +126,7 @@ export default function HeroIntro() {
           >
             <span className="text-primary">Atharv Naik</span>
             <br />
-            <span className="text-white">AI-native product engineer</span>
+            <span className="text-white">Mobile app developer & GTM expert</span>
           </motion.h1>
 
           <motion.p
@@ -137,8 +137,7 @@ export default function HeroIntro() {
             className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg"
             style={{ transform: 'translateZ(30px)' }}
           >
-            I ship revenue-ready apps for startups & MNCs — Kafka/ClickHouse backends,
-            iOS products, and AI-native features that convert users into paying customers.
+            I ship revenue-ready mobile apps for startups & MNCs — iOS & Android products, React Native cross-platform apps, and full go-to-market strategies that convert users into paying customers.
           </motion.p>
 
           <motion.div

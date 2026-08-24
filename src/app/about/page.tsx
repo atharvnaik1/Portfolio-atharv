@@ -4,14 +4,32 @@ import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Sections/Footer';
 
 export const metadata: Metadata = {
-  title: 'About IPASHIP LLC — AI-Native Product Studio',
+  title: 'About IPASHIP LLC — Mobile App Studio by Atharv Naik',
   description:
-    'The story of IPASHIP LLC — an AI-native product studio building revenue-ready apps for startups and enterprises, with offices in Dover, Delaware and Pune, India.',
+    'IPASHIP LLC is a mobile app studio founded by Atharv Naik (async-atharv), shipping revenue-ready iOS & Android apps with full go-to-market strategy. Offices in Dover, Delaware and Pune, India.',
   openGraph: {
-    title: 'About IPASHIP LLC',
+    title: 'About IPASHIP LLC — Mobile App Studio Founded by Atharv Naik',
     description:
-      'Passionate story of IPASHIP LLC — shipping production apps that turn ideas into commercial traction.',
-    type: 'website'
+      'IPASHIP LLC — a mobile app studio shipping iOS & Android apps with full GTM strategy that turn ideas into commercial traction. Founded by Atharv Naik.',
+    type: 'website',
+    images: [
+      {
+        url: 'https://async-atharv.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Atharv Naik — Mobile App Developer & Founder of IPASHIP LLC'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About IPASHIP LLC — Mobile App Studio Founded by Atharv Naik',
+    description:
+      'IPASHIP LLC — a mobile app studio shipping iOS & Android apps with full GTM strategies that turn ideas into commercial traction.',
+    images: ['https://async-atharv.com/og-image.png']
+  },
+  alternates: {
+    canonical: 'https://async-atharv.com/about'
   }
 };
 
@@ -49,8 +67,8 @@ export default function AboutPage() {
           <p>
             IPASHIP started with a simple conviction: the world doesn&apos;t need
             more slides — it needs products that open, load, convert, and keep
-            people coming back. We are an AI-native product studio that partners
-            with founders and operators who want software that moves revenue,
+            people coming back. IPASHIP LLC is a mobile app studio that partners
+            with founders and operators who want iOS & Android apps that move revenue,
             not just roadmaps.
           </p>
           <p>
@@ -62,10 +80,10 @@ export default function AboutPage() {
             through every launch night.
           </p>
           <p>
-            Passion is our operating system. We obsess over craft — clean mobile
-            experiences, scalable Kafka and ClickHouse pipelines, and AI features
-            that feel invisible because they simply work. Whether you are
-            validating a first release or scaling a growth engine, IPASHIP is
+            Passion is our operating system. We obsess over craft — polished mobile
+            experiences, App Store & Play Store launches, and go-to-market strategies
+            that drive real user acquisition and retention. Whether you are
+            validating a first release or scaling a mobile growth engine, IPASHIP is
             built to go the distance with you.
           </p>
         </div>
