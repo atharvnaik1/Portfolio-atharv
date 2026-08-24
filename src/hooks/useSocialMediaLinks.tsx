@@ -51,7 +51,7 @@ export default function useSocialMediaLinks() {
           href={item.link}
           target={key === 'email' ? '_self' : '_blank'}
           rel="me noopener noreferrer"
-          className="hover:text-primary transition-colors"
+          className="transition-colors hover:text-primary"
           aria-label={item.label}
           title={item.title}
         >

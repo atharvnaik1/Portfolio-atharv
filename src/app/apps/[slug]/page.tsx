@@ -26,7 +26,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
   return {
     title: `${project.name.trim()} — Live Client App | ipaship`,
-    description: `${project.des} Industry: ${project.industry ?? 'Mobile'}. Delivered in ${deliveryDays} days.`,
+    description: `${project.des} Industry: ${
+      project.industry ?? 'Mobile'
+    }. Delivered in ${deliveryDays} days.`,
     openGraph: {
       title: project.name.trim(),
       description: project.des,

@@ -5,7 +5,11 @@ import { Button, Chip, Image, Link as NextLink } from '@nextui-org/react';
 import { FaApple, FaArrowLeft, FaGooglePlay } from 'react-icons/fa';
 import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Sections/Footer';
-import { AppProjectEntry, getAppScreens, getDeliveryDays } from '@/lib/projectRoutes';
+import {
+  AppProjectEntry,
+  getAppScreens,
+  getDeliveryDays
+} from '@/lib/projectRoutes';
 
 type AppProjectPageProps = {
   entry: AppProjectEntry;
@@ -33,7 +37,7 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
           <div>
             <div className="flex flex-wrap items-center gap-2">
               {project.featured ? (
-                <span className="rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-amber-300">
+                <span className="bg-amber-400/15 rounded-full border border-amber-400/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-amber-300">
                   Founder
                 </span>
               ) : null}
@@ -88,7 +92,9 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500">
                     Industry
                   </dt>
-                  <dd className="mt-1 text-base text-white">{project.industry}</dd>
+                  <dd className="mt-1 text-base text-white">
+                    {project.industry}
+                  </dd>
                 </div>
               ) : null}
               {project.client ? (
@@ -96,7 +102,9 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500">
                     Client
                   </dt>
-                  <dd className="mt-1 text-base text-white">{project.client}</dd>
+                  <dd className="mt-1 text-base text-white">
+                    {project.client}
+                  </dd>
                 </div>
               ) : null}
               <div>
@@ -146,7 +154,7 @@ export default function AppProjectPage({ entry }: AppProjectPageProps) {
           </div>
 
           <div
-            className="mt-6 flex gap-5 overflow-x-auto pb-4 pt-2 scrollbar-thin scroll-smooth"
+            className="scrollbar-thin mt-6 flex gap-5 overflow-x-auto scroll-smooth pb-4 pt-2"
             style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'thin' }}
           >
             {screens.map((src, index) => (

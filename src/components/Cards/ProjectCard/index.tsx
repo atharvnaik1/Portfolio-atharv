@@ -20,9 +20,7 @@ export default function ProjectCard({
   projectDetail,
   classNames
 }: ProjectCardProps) {
-  const hasStores = Boolean(
-    projectDetail.appStore || projectDetail.playStore
-  );
+  const hasStores = Boolean(projectDetail.appStore || projectDetail.playStore);
   const hasGithub = Boolean(projectDetail.github);
 
   return (

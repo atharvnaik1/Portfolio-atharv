@@ -211,7 +211,8 @@ const organizationSchema = {
     },
     {
       '@type': 'PostalAddress',
-      streetAddress: 'In-Cube Co Working, Plot No 41 & 42, Tejaswini Ln 2, Aundh',
+      streetAddress:
+        'In-Cube Co Working, Plot No 41 & 42, Tejaswini Ln 2, Aundh',
       addressLocality: 'Pune',
       addressRegion: 'Maharashtra',
       postalCode: '411067',
@@ -355,13 +356,21 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${monserat.variable}`}>
+      <body className={`${inter.variable} ${monserrat.variable}`}>
         {/* Hidden rel=me links for identity verification (Knowledge Graph / social proof) */}
         <div className="sr-only" aria-hidden="true">
-          <a href="https://www.linkedin.com/in/atharvnaik1/" rel="me">LinkedIn</a>
-          <a href="https://github.com/atharvnaik1" rel="me">GitHub</a>
-          <a href="https://twitter.com/athrvNaik7" rel="me">Twitter</a>
-          <a href="https://www.youtube.com/@IpashipAI" rel="me">YouTube</a>
+          <a href="https://www.linkedin.com/in/atharvnaik1/" rel="me">
+            LinkedIn
+          </a>
+          <a href="https://github.com/atharvnaik1" rel="me">
+            GitHub
+          </a>
+          <a href="https://twitter.com/athrvNaik7" rel="me">
+            Twitter
+          </a>
+          <a href="https://www.youtube.com/@IpashipAI" rel="me">
+            YouTube
+          </a>
         </div>
         {children}
       </body>

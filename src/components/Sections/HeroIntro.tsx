@@ -75,7 +75,12 @@ export default function HeroIntro() {
           }}
           transition={{
             opacity: { delay: token.delay, duration: 0.5 },
-            y: { delay: token.delay, duration: 5, repeat: Infinity, ease: 'easeInOut' },
+            y: {
+              delay: token.delay,
+              duration: 5,
+              repeat: Infinity,
+              ease: 'easeInOut'
+            },
             rotateY: {
               delay: token.delay,
               duration: 7,
@@ -105,7 +110,7 @@ export default function HeroIntro() {
             transformStyle: 'preserve-3d',
             backgroundImage: glowBackground
           }}
-          className="hero-3d-card rounded-3xl border border-white/10 bg-[#120c22]/55 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8 md:p-10"
+          className="hero-3d-card bg-[#120c22]/55 rounded-3xl border border-white/10 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:p-8 md:p-10"
         >
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -126,7 +131,9 @@ export default function HeroIntro() {
           >
             <span className="text-primary">Atharv Naik</span>
             <br />
-            <span className="text-white">Mobile app developer & GTM expert</span>
+            <span className="text-white">
+              Mobile app developer & GTM expert
+            </span>
           </motion.h1>
 
           <motion.p
@@ -137,7 +144,9 @@ export default function HeroIntro() {
             className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg"
             style={{ transform: 'translateZ(30px)' }}
           >
-            I ship revenue-ready mobile apps for startups & MNCs — iOS & Android products, React Native cross-platform apps, and full go-to-market strategies that convert users into paying customers.
+            I ship revenue-ready mobile apps for startups & MNCs — iOS & Android
+            products, React Native cross-platform apps, and full go-to-market
+            strategies that convert users into paying customers.
           </motion.p>
 
           <motion.div
@@ -193,7 +202,9 @@ export default function HeroIntro() {
                 <p className="text-base font-bold text-white sm:text-xl md:text-2xl">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-[10px] text-gray-400 sm:text-xs">{stat.label}</p>
+                <p className="mt-1 text-[10px] text-gray-400 sm:text-xs">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>

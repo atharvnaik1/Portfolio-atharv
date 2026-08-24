@@ -45,7 +45,7 @@ export default function ClientProjects() {
             <button
               type="button"
               onClick={() => setAutoScroll((v) => !v)}
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-white transition hover:bg-white/10 sm:text-sm"
+              className="border-white/15 inline-flex items-center gap-2 rounded-xl border bg-white/5 px-3 py-2 text-xs font-semibold text-white transition hover:bg-white/10 sm:text-sm"
               aria-pressed={!autoScroll}
               aria-label={autoScroll ? 'Pause auto scroll' : 'Play auto scroll'}
             >
@@ -58,7 +58,7 @@ export default function ClientProjects() {
                 <button
                   type="button"
                   onClick={() => scrollManual('left')}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white transition hover:bg-white/10"
+                  className="border-white/15 inline-flex h-9 w-9 items-center justify-center rounded-xl border bg-white/5 text-white transition hover:bg-white/10"
                   aria-label="Scroll client apps left"
                 >
                   <FaChevronLeft />
@@ -66,7 +66,7 @@ export default function ClientProjects() {
                 <button
                   type="button"
                   onClick={() => scrollManual('right')}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white transition hover:bg-white/10"
+                  className="border-white/15 inline-flex h-9 w-9 items-center justify-center rounded-xl border bg-white/5 text-white transition hover:bg-white/10"
                   aria-label="Scroll client apps right"
                 >
                   <FaChevronRight />
@@ -101,7 +101,7 @@ export default function ClientProjects() {
         ) : (
           <div
             ref={manualTrackRef}
-            className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 py-6 scrollbar-thin scroll-smooth"
+            className="scrollbar-thin flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 py-6"
             style={{
               WebkitOverflowScrolling: 'touch',
               scrollbarWidth: 'thin'
@@ -111,7 +111,7 @@ export default function ClientProjects() {
             {projectKeys.map((key) => {
               const item = clientProjects[key as keyof typeof clientProjects];
               return (
-                <div className="snap-center shrink-0" key={key}>
+                <div className="shrink-0 snap-center" key={key}>
                   <ClientAppCard
                     projectDetail={item}
                     slug={projectKeyToSlug(key)}

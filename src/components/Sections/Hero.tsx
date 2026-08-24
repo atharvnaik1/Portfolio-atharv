@@ -115,7 +115,9 @@ const Hero: React.FC = () => {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-gray-300 md:text-lg">
             With{' '}
-            <span className="font-semibold text-white">7 years of experience</span>{' '}
+            <span className="font-semibold text-white">
+              7 years of experience
+            </span>{' '}
             shipping production mobile apps for{' '}
             <span className="font-semibold text-white">
               Google ecosystems, MNCs, and high-growth startups
@@ -140,7 +142,8 @@ const Hero: React.FC = () => {
             <span className="font-semibold text-white">
               Microsoft for Startups
             </span>{' '}
-            — combining go-to-market strategy with real commercial traction on the App Store &amp; Play Store.
+            — combining go-to-market strategy with real commercial traction on
+            the App Store &amp; Play Store.
           </p>
         </section>
 
@@ -181,10 +184,10 @@ const Hero: React.FC = () => {
           aria-label="Intro and featured projects"
           className="py-8"
         >
-          <h2 className="text-center text-lg md:text-xl font-semibold my-4">
+          <h2 className="my-4 text-center text-lg font-semibold md:text-xl">
             Featured
           </h2>
-          <p className="text-center text-gray-400 max-w-3xl mx-auto px-4"></p>
+          <p className="mx-auto max-w-3xl px-4 text-center text-gray-400"></p>
 
           <div className="mb-10 mt-6 w-[100vw] rotate-[-4deg] md:mb-20">
             <Marquee direction="right" pauseOnHover={true}>
@@ -206,4 +209,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-

@@ -65,11 +65,11 @@ export default function AboutPage() {
 
         <div className="mt-10 space-y-6 rounded-3xl border border-white/10 bg-[#120c22]/60 p-6 text-base leading-relaxed text-gray-300 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8 md:text-lg">
           <p>
-            IPASHIP started with a simple conviction: the world doesn&apos;t need
-            more slides — it needs products that open, load, convert, and keep
-            people coming back. IPASHIP LLC is a mobile app studio that partners
-            with founders and operators who want iOS & Android apps that move revenue,
-            not just roadmaps.
+            IPASHIP started with a simple conviction: the world doesn&apos;t
+            need more slides — it needs products that open, load, convert, and
+            keep people coming back. IPASHIP LLC is a mobile app studio that
+            partners with founders and operators who want iOS & Android apps
+            that move revenue, not just roadmaps.
           </p>
           <p>
             From emergency logistics and community super-apps to marketplaces
@@ -80,11 +80,11 @@ export default function AboutPage() {
             through every launch night.
           </p>
           <p>
-            Passion is our operating system. We obsess over craft — polished mobile
-            experiences, App Store & Play Store launches, and go-to-market strategies
-            that drive real user acquisition and retention. Whether you are
-            validating a first release or scaling a mobile growth engine, IPASHIP is
-            built to go the distance with you.
+            Passion is our operating system. We obsess over craft — polished
+            mobile experiences, App Store & Play Store launches, and
+            go-to-market strategies that drive real user acquisition and
+            retention. Whether you are validating a first release or scaling a
+            mobile growth engine, IPASHIP is built to go the distance with you.
           </p>
         </div>
 

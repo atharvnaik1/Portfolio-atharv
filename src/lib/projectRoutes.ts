@@ -27,9 +27,7 @@ export function getDeliveryDays(slug: string): number {
   return 25 + (Math.abs(hash) % 18);
 }
 
-function entriesFrom(
-  projects: ProjectsObjectType
-): AppProjectEntry[] {
+function entriesFrom(projects: ProjectsObjectType): AppProjectEntry[] {
   return Object.entries(projects).map(([key, project]) => ({
     key,
     slug: projectKeyToSlug(key),
@@ -39,9 +37,7 @@ function entriesFrom(
 
 export const appProjectEntries = entriesFrom(clientProjects);
 
-export function getAppProjectBySlug(
-  slug: string
-): AppProjectEntry | undefined {
+export function getAppProjectBySlug(slug: string): AppProjectEntry | undefined {
   return appProjectEntries.find((entry) => entry.slug === slug);
 }
 

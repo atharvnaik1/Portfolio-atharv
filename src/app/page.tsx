@@ -29,21 +29,33 @@ export default function Home() {
         <Navigation />
         <Hero />
       </div>
-      <section id="personal-projects" aria-label="Personal projects by Atharv Naik" className="py-8">
+      <section
+        id="personal-projects"
+        aria-label="Personal projects by Atharv Naik"
+        className="py-8"
+      >
         <ProjectsCarousel
           projects={personalProjects}
           heading="Personal Projects"
         />
       </section>
 
-      <section id="AI-and-web3-projects" aria-label="AI and Web3 projects by Atharv Naik" className="py-8">
+      <section
+        id="AI-and-web3-projects"
+        aria-label="AI and Web3 projects by Atharv Naik"
+        className="py-8"
+      >
         <ProjectsCarousel
           projects={web3Projects}
           heading="AI and Web3 projects"
         />
       </section>
 
-      <section id="Opensource-projects" aria-label="Opensource projects by Atharv Naik" className="py-8">
+      <section
+        id="Opensource-projects"
+        aria-label="Opensource projects by Atharv Naik"
+        className="py-8"
+      >
         <ProjectsCarousel
           projects={opensourceProjects}
           heading="Opensource Projects"
@@ -53,16 +65,20 @@ export default function Home() {
           }}
         />
       </section>
-      <section id="contact-me" aria-label="Contact Atharv Naik" className="py-16">
-        <h2 className="text-center text-3xl font-bold mb-4">Contact Me</h2>
-        <p className="text-center text-gray-400 text-lg">
+      <section
+        id="contact-me"
+        aria-label="Contact Atharv Naik"
+        className="py-16"
+      >
+        <h2 className="mb-4 text-center text-3xl font-bold">Contact Me</h2>
+        <p className="text-center text-lg text-gray-400">
           Feel free to reach out anytime 👇
         </p>
 
-        <div className="text-center mt-4">
+        <div className="mt-4 text-center">
           <a
             href="mailto:atharvajaynaik@gmail.com"
-            className="text-primary underline text-xl"
+            className="text-xl text-primary underline"
           >
             atharvajaynaik@gmail.com
           </a>
@@ -76,4 +92,3 @@ export default function Home() {
     </main>
   );
 }
-
