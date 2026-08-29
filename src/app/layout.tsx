@@ -196,7 +196,9 @@ const organizationSchema = {
   url: 'https://ipaship.com',
   logo: OG_IMAGE,
   founder: {
-    '@id': `${SITE_URL}/#person`
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: PERSON_NAME
   },
   description:
     'IPASHIP LLC is a mobile app studio shipping revenue-ready iOS & Android apps with full go-to-market strategy, for startups and enterprises. Offices in Dover, Delaware and Pune, India.',
@@ -238,7 +240,9 @@ const websiteSchema = {
     'Personal portfolio of Atharv Naik — Mobile App Developer & GTM Expert.',
   inLanguage: 'en-US',
   publisher: {
-    '@id': `${SITE_URL}/#person`
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: PERSON_NAME
   }
 };
 
@@ -247,10 +251,14 @@ const webPageSchema = {
   '@type': 'ProfilePage',
   '@id': SITE_URL,
   mainEntity: {
-    '@id': `${SITE_URL}/#person`
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: PERSON_NAME
   },
   about: {
-    '@id': `${SITE_URL}/#person`
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: PERSON_NAME
   },
   primaryImageOfPage: {
     '@type': 'ImageObject',
@@ -282,9 +290,17 @@ const imageObjectSchema = {
   width: 1200,
   height: 630,
   caption: 'Atharv Naik — Mobile App Developer & GTM Expert',
+  creator: {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: PERSON_NAME
+  },
   creditText: 'Atharv Naik',
+  copyrightNotice: `© ${new Date().getFullYear()} Atharv Naik. All rights reserved.`,
   copyrightHolder: {
-    '@id': `${SITE_URL}/#person`
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: PERSON_NAME
   },
   license: SITE_URL,
   acquireLicensePage: SITE_URL
